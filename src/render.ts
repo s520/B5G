@@ -1,6 +1,6 @@
 import mustache from 'mustache'
 import stripBom from 'strip-bom'
-import { IMapData } from './definition/iMapData';
+import { IMapData } from './definition/iMapData'
 
 /**
  * ステートメントをテンプレートに書き出します。
@@ -8,5 +8,5 @@ import { IMapData } from './definition/iMapData';
  * @param mapData 出力対象のデータ
  */
 export const render = (template: string, mapData: IMapData): string => {
-  return mustache.render(stripBom(template), mapData)
+    return mustache.render(stripBom(template), mapData)
 }
