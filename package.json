@@ -1,5 +1,5 @@
 {
-  "name": "b5",
+  "name": "b5g",
   "version": "0.0.1",
   "description": "Convenience package to generate templates around Bve5 syntax",
   "main": "out/index.js",
