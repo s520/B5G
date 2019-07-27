@@ -5,6 +5,8 @@
     "object-literal-shorthand": false,
     "radix": false,
     "arrow-parens": false,
-    "semicolon": false
+    "semicolon": false,
+    "trailing-comma": false,
+    "ter-indent": [true, 4]
   }
 }
