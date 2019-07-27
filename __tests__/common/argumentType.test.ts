@@ -1,11 +1,7 @@
-import * as argType from '../../src/common/argumentTypes'
+import { ArgumentType } from '../../src/common/argumentTypes'
 
-describe('DoubleArgument', () => {
-    let double: argType.DoubleArgument
-
-    beforeAll(() => {
-        double = new argType.DoubleArgument()
-    })
+describe('Double', () => {
+    const double = ArgumentType.double
 
     describe('isType()', () => {
         it('same type lower case', () => {
@@ -31,27 +27,23 @@ describe('DoubleArgument', () => {
         })
     })
 
-    describe('getOutputValue()', () => {
+    describe('bve5TestValue', () => {
         it('double value', () => {
             const numberRegex = /^[+,-]?([1-9]\d*|0)(\.\d+)?$/
-            expect(numberRegex.test(double.getOutputValue())).toBeTruthy()
+            expect(numberRegex.test(double.bve5TestValue)).toBeTruthy()
         })
     })
 
-    describe('getCSharpTestValue()', () => {
+    describe('csharpTestValue', () => {
         it('double csharp value', () => {
             const numberRegex = /^[+,-]?([1-9]\d*|0)(\.\d+)?$/
-            expect(numberRegex.test(double.getCSharpTestValue())).toBeTruthy()
+            expect(numberRegex.test(double.csharpTestValue)).toBeTruthy()
         })
     })
 })
 
-describe('StringArgument', () => {
-    let string: argType.StringArgument
-
-    beforeAll(() => {
-        string = new argType.StringArgument()
-    })
+describe('String', () => {
+    const string = ArgumentType.string
 
     describe('isType()', () => {
         it('same type lower case', () => {
@@ -77,17 +69,15 @@ describe('StringArgument', () => {
         })
     })
 
-    describe('getOutputValue()', () => {
+    describe('bve5TestValue', () => {
         it('string value', () => {
-            const outputValue = string.getOutputValue()
-            expect(outputValue).toBe(`'${string.testValue}'`)
+            expect(string.bve5TestValue).toBe(`'${string.rowTestValue}'`)
         })
     })
 
-    describe('getCSharpTestValue()', () => {
+    describe('csharpTestValue', () => {
         it('string charp value', () => {
-            const csharpValue = string.getCSharpTestValue()
-            expect(csharpValue).toBe(`"${string.testValue}"`)
+            expect(string.csharpTestValue).toBe(`"${string.rowTestValue}"`)
         })
     })
 })
