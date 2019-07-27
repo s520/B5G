@@ -34,7 +34,7 @@ export interface IArgumentType {
 /**
  * Double型
  */
-class DoubleArgument implements IArgumentType {
+export class DoubleArgument implements IArgumentType {
     readonly typeName = 'Double'
     readonly testValue = '1.0'
 
@@ -58,7 +58,7 @@ class DoubleArgument implements IArgumentType {
 /**
  * String型
  */
-class StringArgument implements IArgumentType {
+export class StringArgument implements IArgumentType {
     readonly typeName = 'String'
     readonly testValue = 'string_value'
 
