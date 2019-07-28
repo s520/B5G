@@ -51,10 +51,6 @@ const createArgPatterns = (
     mapDefinition: mapDef.IMapDefinition,
     targetArguments: IArgument[]
 ): IArgumentPattern[] => {
-    // 引数なし
-    if (mapDefinition.argPatterns === undefined) {
-        return []
-    }
 
     const patterns = linq.from(mapDefinition.versions).selectMany(
         version => {
