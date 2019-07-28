@@ -11,7 +11,7 @@ import { isMapVersion1, isMapVersion2 } from '../common/mapVersionDetector'
  * マップ構文定義から必要な情報を付加したIMapStatementを返します。
  * @param mapDefinition マップ構文定義(yaml)
  */
-export const convertMapStatemnet = (
+export const convertMapStatement = (
     mapDefinition: mapDef.IMapDefinition
 ): IMapStatement => {
     const statement: IMapStatement = <any>mapDefinition
