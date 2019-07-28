@@ -84,7 +84,7 @@ const createArgPattern = (
         .filter(argName => argName !== '')
         .map(argName => {
             const targets = targetArguments.filter(
-                arg => arg.name.toLowerCase() === argName.toLowerCase()
+                arg => arg.name.trim().toLowerCase() === argName.trim().toLowerCase()
             )
             //#region 例外処理
             // TODO: Errorクラスの作成
