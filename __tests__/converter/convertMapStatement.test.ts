@@ -285,7 +285,7 @@ describe('convertMapStatement()', () => {
 
             // Third pattern 2.02(arg1)
             const p3 = state.argPattern[2]
-            expect(p3.version).toBe('1.00')
+            expect(p3.version).toBe('2.02')
             expect(p3.useV1Parser).toBeFalsy()
             expect(p3.useV2Parser).toBeTruthy()
             expect(p3.args.length).toBe(1)
