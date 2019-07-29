@@ -63,4 +63,24 @@ describe('createMapData()', () => {
         expect(mapData.subElems).toMatchObject(['SubElement1', 'SubElement2', 'SubElement3'])
         expect(mapData.funcs).toMatchObject(['Function1', 'Function2', 'Function3'])
     })
+
+    it('multi statement same identifier', () => {
+        const states = [
+            Object.assign({}, statement),
+            Object.assign({}, statement),
+            Object.assign({}, statement)
+        ]
+
+        const mapData = createMapData(states)
+        expect(mapData.states.length).toBe(3)
+        expect(mapData.states[0]).toMatchObject(states[0])
+        expect(mapData.states[1]).toMatchObject(states[1])
+        expect(mapData.states[2]).toMatchObject(states[2])
+        expect(mapData.elems.length).toBe(1)
+        expect(mapData.elems[0]).toBe('Element')
+        expect(mapData.subElems.length).toBe(1)
+        expect(mapData.subElems[0]).toBe('SubElement')
+        expect(mapData.funcs.length).toBe(1)
+        expect(mapData.funcs[0]).toBe('Function')
+    })
 })
