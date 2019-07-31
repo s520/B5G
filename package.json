@@ -15,6 +15,9 @@
   },
   "author": "aoisupersix",
   "license": "MIT",
+  "keywords": [
+    "bve5"
+  ],
   "repository": {
     "type": "git",
     "url": "https://github.com/aoisupersix/B5G"
