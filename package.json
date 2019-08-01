@@ -8,8 +8,10 @@
     "out"
   ],
   "scripts": {
-    "build": "tsc",
+    "build": "tsc && npm run cpdef",
     "prepublishOnly": "npm run build",
+    "cpdef": "cpx src/mapgrammar.yaml ./out",
+    "cpdef_watch": "cpx src/mapgrammar.yaml ./out --watch",
     "test": "jest",
     "lint": "tslint 'src/**/*.ts'"
   },
@@ -23,6 +25,7 @@
     "url": "https://github.com/aoisupersix/B5G"
   },
   "dependencies": {
+    "cpx": "^1.5.0",
     "fs": "0.0.1-security",
     "fs-extra": "^8.1.0",
     "linq": "^3.2.0",
