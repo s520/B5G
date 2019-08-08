@@ -15,7 +15,7 @@ describe('convertArguments', () => {
     beforeEach(() => argDefinition = {
         name: 'test',
         type: 'string',
-        desc: 'test argument',
+        description_md: 'test argument',
         opt: false
     })
 

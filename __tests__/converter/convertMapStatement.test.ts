@@ -12,7 +12,7 @@ describe('convertMapStatement()', () => {
         argDefinition = {
             name: 'Argument',
             type: 'string',
-            desc: 'test argument',
+            description_md: 'test argument',
             opt: false
         }
         mapDefinition = {
