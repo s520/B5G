@@ -15,7 +15,7 @@ export interface IArgumentDefinition {
     /**
      * 引数の説明(Markdown形式)
      */
-    description_md: string
+    arg_description_md: string
 
     /**
      * 省略可能な引数か？
