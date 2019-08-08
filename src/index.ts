@@ -6,5 +6,5 @@ export { IMapDefinition } from './definition/iMapDefinition'
 export { IMapStatement } from './definition/iMapStatement'
 
 export { convert } from './convert'
-export { getDafaultMapData } from './defaultMapData'
+export { getDefaultMapData } from './defaultMapData'
 export { render } from './render'
