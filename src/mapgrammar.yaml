@@ -1,5 +1,6 @@
 - elem: Curve
   func: Setgauge
+  description_md: "[現在の距離程](http://bvets.net/jp/edit/formats/route/map.html#distance)以降の軌間を設定します。この値は、カントを角度に換算するために使用します。"
   versions:
     - "2.02"
   args:

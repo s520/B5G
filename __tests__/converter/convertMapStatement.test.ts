@@ -20,6 +20,7 @@ describe('convertMapStatement()', () => {
             key: 'Key',
             sub_elem: 'SubElement',
             func: 'Function',
+            description_md: 'test syntax',
             versions: [
                 '2.02'
             ],

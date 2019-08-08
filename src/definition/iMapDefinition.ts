@@ -27,6 +27,11 @@ export interface IMapDefinition {
     func: string | undefined
 
     /**
+     * 構文の説明(Markdown形式)
+     */
+    description_md: string
+
+    /**
      * ステートメントが有効なマップバージョン
      */
     versions: string[]
