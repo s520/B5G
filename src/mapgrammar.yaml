@@ -5,7 +5,7 @@
   args:
     - name: Value
       type: "double?"
-      descripdion_md "軌間 [m]"
+      description_md: "軌間 [m]"
       opt: false
   argPatterns:
     - "Value"
@@ -20,7 +20,7 @@
   args:
     - name: Value
       type: "double?"
-      descripdion_md "軌間 [m]"
+      description_md: "軌間 [m]"
       opt: false
   argPatterns:
     - "Value"
@@ -35,7 +35,7 @@
   args:
     - name: Value
       type: "double?"
-      descripdion_md "軌間 [m]"
+      description_md: "軌間 [m]"
       opt: false
   argPatterns:
     - "Value"
@@ -46,7 +46,7 @@
   args:
     - name: X
       type: "double?"
-      descripdion_md "回転中心の x 座標 [m] (正: 曲線の内側, 負: 曲線の外側)"
+      description_md: "回転中心の x 座標 [m] (正: 曲線の内側, 負: 曲線の外側)"
       opt: false
   argPatterns:
     - "X"
@@ -57,7 +57,7 @@
   args:
     - name: Id
       type: "double?"
-      descripdion_md "関数番号 (0: サイン半波長逓減, 1: 直線逓減)"
+      description_md: "関数番号 (0: サイン半波長逓減, 1: 直線逓減)"
       opt: false
   argPatterns:
     - "Id"
@@ -78,11 +78,11 @@
   args:
     - name: Radius
       type: "double?"
-      descripdion_md "曲線半径 [m] (正: 右曲線, 負: 左曲線)"
+      description_md: "曲線半径 [m] (正: 右曲線, 負: 左曲線)"
       opt: false
     - name: Cant
       type: "double?"
-      descripdion_md "カント [m]"
+      description_md: "カント [m]"
       opt: true
   argPatterns:
     - "Radius"
@@ -98,11 +98,11 @@
   args:
     - name: Radius
       type: "double?"
-      descripdion_md "曲線半径 [m] (正: 右曲線, 負: 左曲線)"
+      description_md: "曲線半径 [m] (正: 右曲線, 負: 左曲線)"
       opt: false
     - name: Cant
       type: "double?"
-      descripdion_md "カント [m]"
+      description_md: "カント [m]"
       opt: true
   argPatterns:
     - "Radius,Cant"
@@ -123,11 +123,11 @@
   args:
     - name: Radius
       type: "double?"
-      descripdion_md "曲線半径 [m] (正: 右曲線, 負: 左曲線, 0: 直線)"
+      description_md: "曲線半径 [m] (正: 右曲線, 負: 左曲線, 0: 直線)"
       opt: true
     - name: Cant
       type: "double?"
-      descripdion_md "カント [m]"
+      description_md: "カント [m]"
       opt: true
   argPatterns:
     - ""
@@ -140,7 +140,7 @@
   args:
     - name: Radius
       type: "double?"
-      descripdion_md "曲線半径 [m] (正: 右曲線, 負: 左曲線, 0: 直線)"
+      description_md: "曲線半径 [m] (正: 右曲線, 負: 左曲線, 0: 直線)"
       opt: false
   argPatterns:
     - "Radius"
@@ -161,7 +161,7 @@
   args:
     - name: Gradient
       type: "double?"
-      descripdion_md "勾配 [‰]"
+      description_md: "勾配 [‰]"
       opt: false
   argPatterns:
     - "Gradient"
@@ -176,7 +176,7 @@
   args:
     - name: Gradient
       type: "double?"
-      descripdion_md "勾配 [‰]"
+      description_md: "勾配 [‰]"
       opt: false
   argPatterns:
     - "Gradient"
@@ -197,7 +197,7 @@
   args:
     - name: Gradient
       type: "double?"
-      descripdion_md "勾配 [‰]"
+      description_md: "勾配 [‰]"
       opt: true
   argPatterns:
     - ""
@@ -211,11 +211,11 @@
   args:
     - name: X
       type: "double?"
-      descripdion_md "自軌道からの x 座標 [m]"
+      description_md: "自軌道からの x 座標 [m]"
       opt: true
     - name: Radius
       type: "double?"
-      descripdion_md "現在の距離程以降の自軌道との平面曲線相対半径 [m] (0: 直線)"
+      description_md: "現在の距離程以降の自軌道との平面曲線相対半径 [m] (0: 直線)"
       opt: true
   argPatterns:
     - ""
@@ -230,11 +230,11 @@
   args:
     - name: Y
       type: "double?"
-      descripdion_md "自軌道からの y 座標 [m]"
+      description_md: "自軌道からの y 座標 [m]"
       opt: true
     - name: Radius
       type: "double?"
-      descripdion_md "現在の距離程以降の自軌道との縦曲線相対半径 [m] (0: 直線)"
+      description_md: "現在の距離程以降の自軌道との縦曲線相対半径 [m] (0: 直線)"
       opt: true
   argPatterns:
     - ""
@@ -251,19 +251,19 @@
   args:
     - name: X
       type: "double?"
-      descripdion_md "自軌道からの x 座標 [m]"
+      description_md: "自軌道からの x 座標 [m]"
       opt: false
     - name: Y
       type: "double?"
-      descripdion_md "自軌道からの y 座標 [m]"
+      description_md: "自軌道からの y 座標 [m]"
       opt: false
     - name: RadiusH
       type: "double?"
-      descripdion_md "現在の距離程以降の自軌道との平面曲線相対半径 [m] (0: 直線)"
+      description_md: "現在の距離程以降の自軌道との平面曲線相対半径 [m] (0: 直線)"
       opt: true
     - name: RadiusV
       type: "double?"
-      descripdion_md "現在の距離程以降の自軌道との縦曲線相対半径 [m] (0: 直線)"
+      description_md: "現在の距離程以降の自軌道との縦曲線相対半径 [m] (0: 直線)"
       opt: true
   argPatterns:
     - "X,Y"
@@ -278,7 +278,7 @@
   args:
     - name: Gauge
       type: "double?"
-      descripdion_md "軌間 [m]"
+      description_md: "軌間 [m]"
       opt: false
   argPatterns:
     - "Gauge"
@@ -292,7 +292,7 @@
   args:
     - name: Gauge
       type: "double?"
-      descripdion_md "軌間 [m]"
+      description_md: "軌間 [m]"
       opt: false
   argPatterns:
     - "Gauge"
@@ -305,7 +305,7 @@
   args:
     - name: X
       type: "double?"
-      descripdion_md "回転中心の x 座標 [m] (正: 曲線の内側, 負: 曲線の外側)"
+      description_md: "回転中心の x 座標 [m] (正: 曲線の内側, 負: 曲線の外側)"
       opt: false
   argPatterns:
     - "X"
@@ -318,7 +318,7 @@
   args:
     - name: Id
       type: "double?"
-      descripdion_md "関数番号 (0: サイン半波長逓減, 1: 直線逓減)"
+      description_md: "関数番号 (0: サイン半波長逓減, 1: 直線逓減)"
       opt: false
   argPatterns:
     - "Id"
@@ -341,7 +341,7 @@
   args:
     - name: Cant
       type: "double?"
-      descripdion_md "カント [m] (正: 右に傾ける, 負: 左に傾ける)"
+      description_md: "カント [m] (正: 右に傾ける, 負: 左に傾ける)"
       opt: false
   argPatterns:
     - "Cant"
@@ -364,7 +364,7 @@
   args:
     - name: Cant
       type: "double?"
-      descripdion_md "カント [m] (正: 右に傾ける, 負: 左に傾ける)"
+      description_md: "カント [m] (正: 右に傾ける, 負: 左に傾ける)"
       opt: true
   argPatterns:
     - ""
@@ -381,7 +381,7 @@
   args:
     - name: Cant
       type: "double?"
-      descripdion_md "カント [m] (正: 右に傾ける, 負: 左に傾ける)"
+      description_md: "カント [m] (正: 右に傾ける, 負: 左に傾ける)"
       opt: true
   argPatterns:
     - "Cant"
@@ -395,7 +395,7 @@
   args:
     - name: FilePath
       type: string
-      descripdion_md "このファイルからストラクチャーリストファイルへの相対パス"
+      description_md: "このファイルからストラクチャーリストファイルへの相対パス"
       opt: false
   argPatterns:
     - "FilePath"
@@ -409,39 +409,39 @@
   args:
     - name: TrackKey
       type: string
-      descripdion_md "配置先の軌道名 (0: 自軌道)"
+      description_md: "配置先の軌道名 (0: 自軌道)"
       opt: false
     - name: X
       type: "double?"
-      descripdion_md "軌道からの x 座標 [m]"
+      description_md: "軌道からの x 座標 [m]"
       opt: false
     - name: Y
       type: "double?"
-      descripdion_md "軌道からの y 座標 [m]"
+      description_md: "軌道からの y 座標 [m]"
       opt: false
     - name: Z
       type: "double?"
-      descripdion_md "軌道からの z 座標 [m]"
+      description_md: "軌道からの z 座標 [m]"
       opt: false
     - name: RX
       type: "double?"
-      descripdion_md "軌道に対する x 軸回りの角 [deg]"
+      description_md: "軌道に対する x 軸回りの角 [deg]"
       opt: false
     - name: RY
       type: "double?"
-      descripdion_md "軌道に対する y 軸回りの角 [deg]"
+      description_md: "軌道に対する y 軸回りの角 [deg]"
       opt: false
     - name: RZ
       type: "double?"
-      descripdion_md "軌道に対する z 軸回りの角 [deg]"
+      description_md: "軌道に対する z 軸回りの角 [deg]"
       opt: false
     - name: Tilt
       type: "double?"
-      descripdion_md "傾斜オプション (0: 常に水平, 1: 勾配に連動, 2: カントに連動, 3: 勾配とカントに連動)"
+      description_md: "傾斜オプション (0: 常に水平, 1: 勾配に連動, 2: カントに連動, 3: 勾配とカントに連動)"
       opt: false
     - name: Span
       type: "double?"
-      descripdion_md "曲線における弦の長さ [m]"
+      description_md: "曲線における弦の長さ [m]"
       opt: false
   argPatterns:
     - "TrackKey,X,Y,Z,RX,RY,RZ,Tilt,Span"
@@ -455,15 +455,15 @@
   args:
     - name: TrackKey
       type: string
-      descripdion_md "配置先の軌道名 (0: 自軌道)"
+      description_md: "配置先の軌道名 (0: 自軌道)"
       opt: false
     - name: Tilt
       type: "double?"
-      descripdion_md "傾斜オプション (0: 常に水平, 1: 勾配に連動, 2: カントに連動, 3: 勾配とカントに連動)"
+      description_md: "傾斜オプション (0: 常に水平, 1: 勾配に連動, 2: カントに連動, 3: 勾配とカントに連動)"
       opt: false
     - name: Span
       type: "double?"
-      descripdion_md "曲線における弦の長さ [m]"
+      description_md: "曲線における弦の長さ [m]"
       opt: false
   argPatterns:
     - "TrackKey,Tilt,Span"
@@ -478,15 +478,15 @@
   args:
     - name: TrackKey1
       type: string
-      descripdion_md "一方の軌道の軌道名 (0: 自軌道)"
+      description_md: "一方の軌道の軌道名 (0: 自軌道)"
       opt: false
     - name: TrackKey2
       type: string
-      descripdion_md "他方の軌道の軌道名"
+      description_md: "他方の軌道の軌道名"
       opt: false
     - name: Flag
       type: "double?"
-      descripdion_md "変形方向 (0: x および y 方向に変形, 1: x 方向のみに変形)"
+      description_md: "変形方向 (0: x および y 方向に変形, 1: x 方向のみに変形)"
       opt: true
   argPatterns:
     - "TrackKey1,TrackKey2"
@@ -502,43 +502,43 @@
   args:
     - name: TrackKey
       type: string
-      descripdion_md "配置先の軌道名 (0: 自軌道)"
+      description_md: "配置先の軌道名 (0: 自軌道)"
       opt: false
     - name: X
       type: "double?"
-      descripdion_md "軌道からの x 座標 [m]"
+      description_md: "軌道からの x 座標 [m]"
       opt: false
     - name: Y
       type: "double?"
-      descripdion_md "軌道からの y 座標 [m]"
+      description_md: "軌道からの y 座標 [m]"
       opt: false
     - name: Z
       type: "double?"
-      descripdion_md "軌道からの z 座標 [m]"
+      description_md: "軌道からの z 座標 [m]"
       opt: false
     - name: RX
       type: "double?"
-      descripdion_md "軌道に対する x 軸回りの角 [deg]"
+      description_md: "軌道に対する x 軸回りの角 [deg]"
       opt: false
     - name: RY
       type: "double?"
-      descripdion_md "軌道に対する y 軸回りの角 [deg]"
+      description_md: "軌道に対する y 軸回りの角 [deg]"
       opt: false
     - name: RZ
       type: "double?"
-      descripdion_md "軌道に対する z 軸回りの角 [deg]"
+      description_md: "軌道に対する z 軸回りの角 [deg]"
       opt: false
     - name: Tilt
       type: "double?"
-      descripdion_md "傾斜オプション (0: 常に水平, 1: 勾配に連動, 2: カントに連動, 3: 勾配とカントに連動)"
+      description_md: "傾斜オプション (0: 常に水平, 1: 勾配に連動, 2: カントに連動, 3: 勾配とカントに連動)"
       opt: false
     - name: Span
       type: "double?"
-      descripdion_md "曲線における弦の長さ [m]"
+      description_md: "曲線における弦の長さ [m]"
       opt: false
     - name: Interval
       type: "double?"
-      descripdion_md "配置間隔 [m]"
+      description_md: "配置間隔 [m]"
       opt: false
   argPatterns:
     - "TrackKey,X,Y,Z,RX,RY,RZ,Tilt,Span,Interval"
@@ -553,19 +553,19 @@
   args:
     - name: TrackKey
       type: string
-      descripdion_md "配置先の軌道名 (0: 自軌道)"
+      description_md: "配置先の軌道名 (0: 自軌道)"
       opt: false
     - name: Tilt
       type: "double?"
-      descripdion_md "傾斜オプション (0: 常に水平, 1: 勾配に連動, 2: カントに連動, 3: 勾配とカントに連動)"
+      description_md: "傾斜オプション (0: 常に水平, 1: 勾配に連動, 2: カントに連動, 3: 勾配とカントに連動)"
       opt: false
     - name: Span
       type: "double?"
-      descripdion_md "曲線における弦の長さ [m]"
+      description_md: "曲線における弦の長さ [m]"
       opt: false
     - name: Interval
       type: "double?"
-      descripdion_md "配置間隔 [m]"
+      description_md: "配置間隔 [m]"
       opt: false
   argPatterns:
     - "TrackKey,Tilt,Span,Interval"
@@ -589,7 +589,7 @@
   args:
     - name: StructureKey
       type: string
-      descripdion_md "ストラクチャー名"
+      description_md: "ストラクチャー名"
       opt: false
   argPatterns:
     - "StructureKey"
@@ -603,7 +603,7 @@
   args:
     - name: FilePath
       type: string
-      descripdion_md "このファイルから停車場リストファイルへの相対パス"
+      description_md: "このファイルから停車場リストファイルへの相対パス"
       opt: false
   argPatterns:
     - "FilePath"
@@ -617,15 +617,15 @@
   args:
     - name: Door
       type: "double?"
-      descripdion_md "開くドアの方向 (-1: 左, 1: 右)"
+      description_md: "開くドアの方向 (-1: 左, 1: 右)"
       opt: false
     - name: Margin1
       type: "double?"
-      descripdion_md "停止位置誤差の後方許容範囲 (負の値で設定)"
+      description_md: "停止位置誤差の後方許容範囲 (負の値で設定)"
       opt: false
     - name: Margin2
       type: "double?"
-      descripdion_md "停止位置誤差の後方許容範囲"
+      description_md: "停止位置誤差の後方許容範囲"
       opt: false
   argPatterns:
     - "Door,Margin1,Margin2"
@@ -701,7 +701,7 @@
   args:
     - name: FilePath
       type: string
-      descripdion_md "このファイルから信号現示リストファイルへの相対パス"
+      description_md: "このファイルから信号現示リストファイルへの相対パス"
       opt: false
   argPatterns:
     - "FilePath"
@@ -716,43 +716,43 @@
   args:
     - name: Section
       type: "double?"
-      descripdion_md "関連づける閉そくの相対インデックス"
+      description_md: "関連づける閉そくの相対インデックス"
       opt: false
     - name: TrackKey
       type: string
-      descripdion_md "配置先の軌道名"
+      description_md: "配置先の軌道名"
       opt: false
     - name: X
       type: "double?"
-      descripdion_md "軌道からの x 座標 [m]"
+      description_md: "軌道からの x 座標 [m]"
       opt: false
     - name: Y
       type: "double?"
-      descripdion_md "軌道からの y 座標 [m]"
+      description_md: "軌道からの y 座標 [m]"
       opt: false
     - name: Z
       type: "double?"
-      descripdion_md "軌道からの z 座標 [m]"
+      description_md: "軌道からの z 座標 [m]"
       opt: true
     - name: RX
       type: "double?"
-      descripdion_md "軌道に対する x 軸回りの角 [deg]"
+      description_md: "軌道に対する x 軸回りの角 [deg]"
       opt: true
     - name: RY
       type: "double?"
-      descripdion_md "軌道に対する y 軸回りの角 [deg]"
+      description_md: "軌道に対する y 軸回りの角 [deg]"
       opt: true
     - name: RZ
       type: "double?"
-      descripdion_md "軌道に対する z 軸回りの角 [deg]"
+      description_md: "軌道に対する z 軸回りの角 [deg]"
       opt: true
     - name: Tilt
       type: "double?"
-      descripdion_md "傾斜オプション (0: 常に水平, 1: 勾配に連動, 2: カントに連動, 3: 勾配とカントに連動)"
+      description_md: "傾斜オプション (0: 常に水平, 1: 勾配に連動, 2: カントに連動, 3: 勾配とカントに連動)"
       opt: true
     - name: Span
       type: "double?"
-      descripdion_md "曲線における弦の長さ [m]"
+      description_md: "曲線における弦の長さ [m]"
       opt: true
   argPatterns:
     - "Section,TrackKey,X,Y"
@@ -766,15 +766,15 @@
   args:
     - name: Type
       type: "double?"
-      descripdion_md "保安装置に送る地上子種別 (整数)"
+      description_md: "保安装置に送る地上子種別 (整数)"
       opt: false
     - name: Section
       type: "double?"
-      descripdion_md "関連づける閉そくの相対インデックス"
+      description_md: "関連づける閉そくの相対インデックス"
       opt: false
     - name: Senddata
       type: "double?"
-      descripdion_md "保安装置に送る値 (整数)"
+      description_md: "保安装置に送る値 (整数)"
       opt: false
   argPatterns:
     - "Type,Section,SendData"
@@ -787,7 +787,7 @@
   args:
     - name: V
       type: "double?"
-      descripdion_md "走行速度 [km/h]"
+      description_md: "走行速度 [km/h]"
       opt: false
   argPatterns:
     - "V"
@@ -811,11 +811,11 @@
   args:
     - name: Time
       type: string
-      descripdion_md "時刻を表す文字列 ('hh:mm:ss')"
+      description_md: "時刻を表す文字列 ('hh:mm:ss')"
       opt: true
     - name: Second
       type: "double?"
-      descripdion_md "00:00:00 からの経過時間 [sec]"
+      description_md: "00:00:00 からの経過時間 [sec]"
       opt: true
   argPatterns:
     - "Time"
@@ -829,15 +829,15 @@
   args:
     - name: Red
       type: "double?"
-      descripdion_md "赤成分 (0 ~ 1)"
+      description_md: "赤成分 (0 ~ 1)"
       opt: false
     - name: Green
       type: "double?"
-      descripdion_md "緑成分 (0 ~ 1)"
+      description_md: "緑成分 (0 ~ 1)"
       opt: false
     - name: Blue
       type: "double?"
-      descripdion_md "青成分 (0 ~ 1)"
+      description_md: "青成分 (0 ~ 1)"
       opt: false
   argPatterns:
     - "Red,Green,Blue"
@@ -850,15 +850,15 @@
   args:
     - name: Red
       type: "double?"
-      descripdion_md "赤成分 (0 ~ 1)"
+      description_md: "赤成分 (0 ~ 1)"
       opt: false
     - name: Green
       type: "double?"
-      descripdion_md "緑成分 (0 ~ 1)"
+      description_md: "緑成分 (0 ~ 1)"
       opt: false
     - name: Blue
       type: "double?"
-      descripdion_md "青成分 (0 ~ 1)"
+      description_md: "青成分 (0 ~ 1)"
       opt: false
   argPatterns:
     - "Red,Green,Blue"
@@ -871,11 +871,11 @@
   args:
     - name: Pitch
       type: "double?"
-      descripdion_md "角度"
+      description_md: "角度"
       opt: false
     - name: Yaw
       type: "double?"
-      descripdion_md "回転角"
+      description_md: "回転角"
       opt: false
   argPatterns:
     - "Pitch,Yaw"
@@ -887,19 +887,19 @@
   args:
     - name: Density
       type: "double?"
-      descripdion_md "濃度"
+      description_md: "濃度"
       opt: true
     - name: Red
       type: "double?"
-      descripdion_md "赤成分 (0 ~ 1)"
+      description_md: "赤成分 (0 ~ 1)"
       opt: true
     - name: Green
       type: "double?"
-      descripdion_md "緑成分 (0 ~ 1)"
+      description_md: "緑成分 (0 ~ 1)"
       opt: true
     - name: Blue
       type: "double?"
-      descripdion_md "青成分 (0 ~ 1)"
+      description_md: "青成分 (0 ~ 1)"
       opt: true
   argPatterns:
     - ""
@@ -917,19 +917,19 @@
   args:
     - name: Density
       type: "double?"
-      descripdion_md "濃度"
+      description_md: "濃度"
       opt: true
     - name: Red
       type: "double?"
-      descripdion_md "赤成分 (0 ~ 1)"
+      description_md: "赤成分 (0 ~ 1)"
       opt: true
     - name: Green
       type: "double?"
-      descripdion_md "緑成分 (0 ~ 1)"
+      description_md: "緑成分 (0 ~ 1)"
       opt: true
     - name: Blue
       type: "double?"
-      descripdion_md "青成分 (0 ~ 1)"
+      description_md: "青成分 (0 ~ 1)"
       opt: true
   argPatterns:
     - "Density,Red,Green,Blue"
@@ -940,7 +940,7 @@
   args:
     - name: Value
       type: "double?"
-      descripdion_md "距離 [m] (0: [設定] ウィンドウで設定される描画距離を適用)"
+      description_md: "距離 [m] (0: [設定] ウィンドウで設定される描画距離を適用)"
       opt: false
   argPatterns:
     - "Value"
@@ -951,7 +951,7 @@
   args:
     - name: Value
       type: "double?"
-      descripdion_md "昼間画像と夜間画像の混合比 (0: 夜間画像 ~ 1: 昼間画像)"
+      description_md: "昼間画像と夜間画像の混合比 (0: 夜間画像 ~ 1: 昼間画像)"
       opt: true
   argPatterns:
     - ""
@@ -967,7 +967,7 @@
   args:
     - name: Value
       type: "double?"
-      descripdion_md "昼間画像と夜間画像の混合比 (0: 夜間画像 ~ 1: 昼間画像)"
+      description_md: "昼間画像と夜間画像の混合比 (0: 夜間画像 ~ 1: 昼間画像)"
       opt: false
   argPatterns:
     - "Value"
@@ -980,27 +980,27 @@
   args:
     - name: X
       type: "double?"
-      descripdion_md "左右変位 (左と右のレールの通り変位の平均に相当) の標準偏差 [m]"
+      description_md: "左右変位 (左と右のレールの通り変位の平均に相当) の標準偏差 [m]"
       opt: false
     - name: Y
       type: "double?"
-      descripdion_md "上下変位 (左と右のレールの高低変位の平均に相当) の標準偏差 [m]"
+      description_md: "上下変位 (左と右のレールの高低変位の平均に相当) の標準偏差 [m]"
       opt: false
     - name: R
       type: "double?"
-      descripdion_md "ロール変位 (水準変位を軌間で除した値に相当) の標準偏差 [rad]"
+      description_md: "ロール変位 (水準変位を軌間で除した値に相当) の標準偏差 [rad]"
       opt: false
     - name: LX
       type: "double?"
-      descripdion_md "左右変位の遮断波長 [m]"
+      description_md: "左右変位の遮断波長 [m]"
       opt: false
     - name: LY
       type: "double?"
-      descripdion_md "上下変位の遮断波長 [m]"
+      description_md: "上下変位の遮断波長 [m]"
       opt: false
     - name: LR
       type: "double?"
-      descripdion_md "ロール変位の遮断波長 [m]"
+      description_md: "ロール変位の遮断波長 [m]"
       opt: false
   argPatterns:
     - "X,Y,R,LX,LY,LR"
@@ -1013,15 +1013,15 @@
   args:
     - name: A
       type: "double?"
-      descripdion_md "走行速度 0 km/h における粘着係数"
+      description_md: "走行速度 0 km/h における粘着係数"
       opt: false
     - name: B
       type: "double?"
-      descripdion_md "粘着係数の走行速度に対する変化を表す係数"
+      description_md: "粘着係数の走行速度に対する変化を表す係数"
       opt: true
     - name: C
       type: "double?"
-      descripdion_md "粘着係数の走行速度に対する変化を表す係数"
+      description_md: "粘着係数の走行速度に対する変化を表す係数"
       opt: true
   argPatterns:
     - "A"
@@ -1036,7 +1036,7 @@
   args:
     - name: FilePath
       type: string
-      descripdion_md "このファイルからサウンドリストファイルへの相対パス"
+      description_md: "このファイルからサウンドリストファイルへの相対パス"
       opt: false
   argPatterns:
     - "FilePath"
@@ -1061,7 +1061,7 @@
   args:
     - name: FilePath
       type: string
-      descripdion_md "このファイルからサウンドリストファイルへの相対パス"
+      description_md: "このファイルからサウンドリストファイルへの相対パス"
       opt: false
   argPatterns:
     - "FilePath"
@@ -1076,11 +1076,11 @@
   args:
     - name: X
       type: "double?"
-      descripdion_md "軌道からの x 座標 [m]"
+      description_md: "軌道からの x 座標 [m]"
       opt: false
     - name: Y
       type: "double?"
-      descripdion_md "軌道からの y 座標 [m]"
+      description_md: "軌道からの y 座標 [m]"
       opt: false
   argPatterns:
     - "X,Y"
@@ -1093,7 +1093,7 @@
   args:
     - name: Index
       type: "double?"
-      descripdion_md "車両サウンドファイルの [Run] セクションで定義したインデックス"
+      description_md: "車両サウンドファイルの [Run] セクションで定義したインデックス"
       opt: false
   argPatterns:
     - "Index"
@@ -1106,7 +1106,7 @@
   args:
     - name: Index
       type: "double?"
-      descripdion_md "車両サウンドファイルの [Flange] セクションで定義したインデックス"
+      description_md: "車両サウンドファイルの [Flange] セクションで定義したインデックス"
       opt: false
   argPatterns:
     - "Index"
@@ -1119,7 +1119,7 @@
   args:
     - name: Index
       type: "double?"
-      descripdion_md "車両サウンドファイルの [Joint] セクションで定義したインデックス"
+      description_md: "車両サウンドファイルの [Joint] セクションで定義したインデックス"
       opt: false
   argPatterns:
     - "Index"
@@ -1133,19 +1133,19 @@
   args:
     - name: TrainKey
       type: string
-      descripdion_md "他列車名 (任意の文字列)"
+      description_md: "他列車名 (任意の文字列)"
       opt: false
     - name: FilePath
       type: string
-      descripdion_md "このファイルから他列車ファイルへの相対パス"
+      description_md: "このファイルから他列車ファイルへの相対パス"
       opt: false
     - name: TrackKey
       type: string
-      descripdion_md "走行する軌道"
+      description_md: "走行する軌道"
       opt: true
     - name: Direction
       type: "double?"
-      descripdion_md "進行方向 (-1: 対向, 1: 並走)"
+      description_md: "進行方向 (-1: 対向, 1: 並走)"
       opt: true
   argPatterns:
     - "TrainKey,FilePath,TrackKey,Direction"
@@ -1158,15 +1158,15 @@
   args:
     - name: FilePath
       type: string
-      descripdion_md "このファイルから他列車ファイルへの相対パス"
+      description_md: "このファイルから他列車ファイルへの相対パス"
       opt: false
     - name: TrackKey
       type: string
-      descripdion_md "走行する軌道"
+      description_md: "走行する軌道"
       opt: false
     - name: Direction
       type: "double?"
-      descripdion_md "進行方向 (-1: 対向, 1: 並走)"
+      description_md: "進行方向 (-1: 対向, 1: 並走)"
       opt: false
   argPatterns:
     - "FilePath,TrackKey,Direction"
@@ -1181,11 +1181,11 @@
   args:
     - name: Time
       type: string
-      descripdion_md "時刻を表す文字列 ('hh:mm:ss')"
+      description_md: "時刻を表す文字列 ('hh:mm:ss')"
       opt: true
     - name: Second
       type: "double?"
-      descripdion_md "00:00:00 からの経過時間 [sec]"
+      description_md: "00:00:00 からの経過時間 [sec]"
       opt: true
   argPatterns:
     - "Time"
@@ -1200,19 +1200,19 @@
   args:
     - name: Decelerate
       type: "double?"
-      descripdion_md "減速度 [km/h/s]"
+      description_md: "減速度 [km/h/s]"
       opt: false
     - name: StopTime
       type: "double?"
-      descripdion_md "停車時間 [s]"
+      description_md: "停車時間 [s]"
       opt: false
     - name: Accelerate
       type: "double?"
-      descripdion_md "加速度 [km/h/s]"
+      description_md: "加速度 [km/h/s]"
       opt: false
     - name: Speed
       type: "double?"
-      descripdion_md "加速後の走行速度 [km/h]"
+      description_md: "加速後の走行速度 [km/h]"
       opt: false
   argPatterns:
     - "Decelerate,StopTime,Accelerate,Speed"
@@ -1226,11 +1226,11 @@
   args:
     - name: TrackKey
       type: string
-      descripdion_md "走行する軌道"
+      description_md: "走行する軌道"
       opt: false
     - name: Direction
       type: "double?"
-      descripdion_md "進行方向 (-1: 対向, 1: 並走)"
+      description_md: "進行方向 (-1: 対向, 1: 並走)"
       opt: false
   argPatterns:
     - "TrackKey,Direction"
@@ -1244,23 +1244,23 @@
   args:
     - name: Fogstart
       type: "double?"
-      descripdion_md "視界が100%の距離 [m]"
+      description_md: "視界が100%の距離 [m]"
       opt: false
     - name: Fogend
       type: "double?"
-      descripdion_md "視界が0%になる距離 [m]"
+      description_md: "視界が0%になる距離 [m]"
       opt: false
     - name: red
       type: "double?"
-      descripdion_md "赤成分 (0 ~ 1)"
+      description_md: "赤成分 (0 ~ 1)"
       opt: false
     - name: green
       type: "double?"
-      descripdion_md "緑成分 (0 ~ 1)"
+      description_md: "緑成分 (0 ~ 1)"
       opt: false
     - name: blue
       type: "double?"
-      descripdion_md "青成分 (0 ~ 1)"
+      description_md: "青成分 (0 ~ 1)"
       opt: false
   argPatterns:
     - ""
@@ -1276,11 +1276,11 @@
   args:
     - name: radius
       type: "double?"
-      descripdion_md "曲線半径 [m] (正: 右曲線, 負: 左曲線)"
+      description_md: "曲線半径 [m] (正: 右曲線, 負: 左曲線)"
       opt: false
     - name: cant
       type: "double?"
-      descripdion_md "カント [m]"
+      description_md: "カント [m]"
       opt: true
   argPatterns:
     - "radius,cant"
@@ -1294,7 +1294,7 @@
   args:
     - name: rate
       type: "double?"
-      descripdion_md "勾配 [‰]"
+      description_md: "勾配 [‰]"
       opt: true
   argPatterns:
     - "rate"
@@ -1308,7 +1308,7 @@
   args:
     - name: slope
       type: "double?"
-      descripdion_md "傾き(+: 右, -: 左)"
+      description_md: "傾き(+: 右, -: 左)"
       opt: true
   argPatterns:
     - "slope"
@@ -1320,7 +1320,7 @@
   args:
     - name: FilePath
       type: string
-      descripdion_md "挿入するMapファイルへの相対パス"
+      description_md: "挿入するMapファイルへの相対パス"
       opt: false
   argPatterns:
     - "FilePath"
