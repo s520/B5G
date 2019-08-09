@@ -12,6 +12,7 @@
     - "Value"
 - elem: Gauge
   func: Set
+  description_md: "[現在の距離程](http://bvets.net/jp/edit/formats/route/map.html#distance)以降の軌間を設定します。この値は、カントを角度に換算するために使用します。"
   deprecated: true
   inheritance: CurveSetgauge
   versions:
@@ -27,6 +28,7 @@
     - "Value"
 - elem: Curve
   func: Gauge
+  description_md: "[現在の距離程](http://bvets.net/jp/edit/formats/route/map.html#distance)以降の軌間を設定します。この値は、カントを角度に換算するために使用します。"
   deprecated: true
   inheritance: CurveSetgauge
   versions:
@@ -42,6 +44,7 @@
     - "Value"
 - elem: Curve
   func: Setcenter
+  description_md: "[現在の距離程](http://bvets.net/jp/edit/formats/route/map.html#distance)以降のカントの回転中心位置を設定します。"
   versions:
     - "2.02"
   args:
@@ -53,6 +56,7 @@
     - "X"
 - elem: Curve
   func: Setfunction
+  description_md: "[現在の距離程](http://bvets.net/jp/edit/formats/route/map.html#distance)以降のカントの回転中心位置を設定します。"
   versions:
     - "2.02"
   args:
@@ -64,6 +68,7 @@
     - "Id"
 - elem: Curve
   func: Begintransition
+  description_md: "平面曲線の緩和曲線を[現在の距離程](http://bvets.net/jp/edit/formats/route/map.html#distance)から開始します。"
   versions:
     - "2.02"
     - "2.00"
@@ -74,6 +79,7 @@
     []
 - elem: Curve
   func: Begin
+  description_md: "平面曲線の円曲線を[現在の距離程](http://bvets.net/jp/edit/formats/route/map.html#distance)から開始します。カントを設定する場合は、この手前に Curve.BeginTransition を記述する必要があります。"
   versions:
     - "2.02"
   args:
@@ -90,6 +96,7 @@
     - "Radius,Cant"
 - elem: Curve
   func: Begincircular
+  description_md: "平面曲線の円曲線を[現在の距離程](http://bvets.net/jp/edit/formats/route/map.html#distance)から開始します。カントを設定する場合は、この手前に Curve.BeginTransition を記述する必要があります。"
   deprecated: true
   inheritance: CurveBegin
   versions:
@@ -109,6 +116,7 @@
     - "Radius,Cant"
 - elem: Curve
   func: End
+  description_md: "平面曲線を[現在の距離程](http://bvets.net/jp/edit/formats/route/map.html#distance)で終了し、直線を開始します。"
   versions:
     - "2.02"
     - "2.00"
@@ -119,6 +127,7 @@
     []
 - elem: Curve
   func: Interpolate
+  description_md: "[現在の距離程](http://bvets.net/jp/edit/formats/route/map.html#distance)における平面曲線の半径とカントを設定します。1 つ手前の Curve.Interpolate または Curve.Change の間は補間されます。補間関数は、Curve.SetFunction で設定します。引数を省略した場合、1 つ手前の Curve.Interpolate の値が使用されます。"
   versions:
     - "2.02"
   args:
@@ -136,6 +145,7 @@
     - "Radius,Cant"
 - elem: Curve
   func: Change
+  description_md: "[現在の距離程](http://bvets.net/jp/edit/formats/route/map.html#distance)以降の平面曲線の半径を設定します。Curve.Begin(radius) と同等です。"
   versions:
     - "2.02"
   args:
@@ -147,6 +157,7 @@
     - "Radius"
 - elem: Gradient
   func: Begintransition
+  description_md: "縦曲線を[現在の距離程](http://bvets.net/jp/edit/formats/route/map.html#distance)から開始します。"
   versions:
     - "2.02"
     - "2.00"
@@ -157,6 +168,7 @@
     - ""
 - elem: Gradient
   func: Begin
+  description_md: "縦曲線を[現在の距離程](http://bvets.net/jp/edit/formats/route/map.html#distance)で終了し、勾配を一定に保ちます。"
   versions:
     - "2.02"
   args:
@@ -168,6 +180,7 @@
     - "Gradient"
 - elem: Gradient
   func: Beginconst
+  description_md: "縦曲線を[現在の距離程](http://bvets.net/jp/edit/formats/route/map.html#distance)で終了し、勾配を一定に保ちます。"
   deprecated: true
   inheritance: GradientBegin
   versions:
@@ -183,6 +196,7 @@
     - "Gradient"
 - elem: Gradient
   func: End
+  description_md: "勾配を[現在の距離程](http://bvets.net/jp/edit/formats/route/map.html#distance)で終了し、レベル (水平) を開始します。"
   versions:
     - "2.02"
     - "2.00"
@@ -193,6 +207,7 @@
     []
 - elem: Gradient
   func: Interpolate
+  description_md: "[現在の距離程](http://bvets.net/jp/edit/formats/route/map.html#distance)における勾配を設定します。2 つの Gradient.Interpolate の間の勾配は線形補間されます。引数を省略した場合、1 つ手前の Gradient.Interpolate の値が使用されます。"
   versions:
     - "2.02"
   args:
@@ -207,6 +222,7 @@
   sub_elem: X
   key: TrackKey
   func: Interpolate
+  description_md: "現在の[現在の距離程](http://bvets.net/jp/edit/formats/route/map.html#distance)における他軌道の x 方向位置を設定します。2 つの Track[].X.Interpolate との間の x 座標は補間されます。引数が省略された場合、1 つ手前の Track[].X.Interpolate の値が使用されます。"
   versions:
     - "2.02"
   args:
@@ -226,6 +242,7 @@
   sub_elem: Y
   key: TrackKey
   func: Interpolate
+  description_md: "現在の[現在の距離程](http://bvets.net/jp/edit/formats/route/map.html#distance)における他軌道の y 方向位置を設定します。2 つの Track[].Y.Interpolate との間の y 座標は補間されます。引数が省略された場合、1 つ手前の Track[].Y.Interpolate の値が使用されます。"
   versions:
     - "2.02"
   args:
@@ -244,6 +261,7 @@
 - elem: Track
   key: TrackKey
   func: Position
+  description_md: "[現在の距離程](http://bvets.net/jp/edit/formats/route/map.html#distance)における他軌道の位置を設定します。Track[].X.Interpolate と Track[].Y.Interpolate を同時に記述することと同等です。ただし、引数が省略された場合、0 が代入されます。"
   skip_test: true
   versions:
     - "2.02"
@@ -274,6 +292,7 @@
   sub_elem: Cant
   key: TrackKey
   func: Setgauge
+  description_md: "[現在の距離程](http://bvets.net/jp/edit/formats/route/map.html#distance)以降の他軌道の軌間を設定します。この値は、カントを角度に換算するために使用します。"
   versions:
     - "2.02"
   args:
@@ -286,6 +305,7 @@
 - elem: Track
   key: TrackKey
   func: Gauge
+  description_md: "[現在の距離程](http://bvets.net/jp/edit/formats/route/map.html#distance)以降の他軌道の軌間を設定します。この値は、カントを角度に換算するために使用します。"
   deprecated: true
   inheritance: TrackCantSetgauge
   versions:
@@ -301,6 +321,7 @@
   sub_elem: Cant
   key: TrackKey
   func: Setcenter
+  description_md: "[現在の距離程](http://bvets.net/jp/edit/formats/route/map.html#distance)以降の他軌道のカントの回転中心位置を設定します。"
   versions:
     - "2.02"
   args:
@@ -314,6 +335,7 @@
   sub_elem: Cant
   key: TrackKey
   func: Setfunction
+  description_md: "[現在の距離程](http://bvets.net/jp/edit/formats/route/map.html#distance)以降の他軌道のカント逓減関数を設定します。"
   versions:
     - "2.02"
   args:
@@ -327,6 +349,7 @@
   sub_elem: Cant
   key: TrackKey
   func: Begintransition
+  description_md: "他軌道のカントの逓減を[現在の距離程](http://bvets.net/jp/edit/formats/route/map.html#distance)から開始します。"
   versions:
     - "2.02"
   args:
@@ -337,6 +360,7 @@
   sub_elem: Cant
   key: TrackKey
   func: Begin
+  description_md: "他軌道のカントの逓減を[現在の距離程](http://bvets.net/jp/edit/formats/route/map.html#distance)で終了し、カントを一定に保ちます。"
   versions:
     - "2.02"
   args:
@@ -350,6 +374,7 @@
   sub_elem: Cant
   key: TrackKey
   func: End
+  description_md: "他軌道のカントを[現在の距離程](http://bvets.net/jp/edit/formats/route/map.html#distance)で終了します。"
   versions:
     - "2.02"
   args:
@@ -360,6 +385,7 @@
   sub_elem: Cant
   key: TrackKey
   func: Interpolate
+  description_md: "[現在の距離程](http://bvets.net/jp/edit/formats/route/map.html#distance)における他軌道のカントを設定します。2 つの Track[].Cant.Interpolate の間のカントは補間されます。補間関数は、Track[].Cant.SetFunction で設定します。引数を省略した場合、1 つ手前の Track[].Cant.Interpolate の値が使用されます。"
   versions:
     - "2.02"
   args:
@@ -373,6 +399,7 @@
 - elem: Track
   key: TrackKey
   func: Cant
+  description_md: "[現在の距離程](http://bvets.net/jp/edit/formats/route/map.html#distance)における他軌道のカントを設定します。2 つの Track[].Cant.Interpolate の間のカントは補間されます。補間関数は、Track[].Cant.SetFunction で設定します。引数を省略した場合、1 つ手前の Track[].Cant.Interpolate の値が使用されます。"
   deprecated: true
   inheritance: TrackCantInterpolate
   versions:
@@ -388,6 +415,7 @@
     - "Cant"
 - elem: Structure
   func: Load
+  description_md: "[ストラクチャーリストファイル](http://bvets.net/jp/edit/formats/route/structure.html)にもとづいてストラクチャーを読み込みます。ストラクチャーを使用する前にこの構文を記述する必要があります。"
   skip_test: true
   versions:
     - "2.02"
@@ -403,6 +431,7 @@
 - elem: Structure
   key: StructureKey
   func: Put
+  description_md: "ストラクチャーを設置します。"
   versions:
     - "2.02"
     - "2.00"
@@ -449,6 +478,7 @@
 - elem: Structure
   key: StructureKey
   func: Put0
+  description_md: "ストラクチャーを設置します。Structure[].Put 構文の x, y, z, rx, ry, rz に 0 を設定したことと同じです。"
   versions:
     - "2.02"
     - "2.00"
@@ -471,6 +501,7 @@
 - elem: Structure
   key: StructureKey
   func: Putbetween
+  description_md: "ストラクチャーを[現在の距離程](http://bvets.net/jp/edit/formats/route/map.html#distance)の 2 つの軌道の間に設置します。ストラクチャーは、軌道間の距離に応じて変形します。"
   skip_test: true
   versions:
     - "2.02"
@@ -496,6 +527,7 @@
   elem: Repeater
   key: RepeaterKey
   func: Begin
+  description_md: "ストラクチャーの連続配置を[現在の距離程](http://bvets.net/jp/edit/formats/route/map.html#distance)から開始します。ストラクチャーは、軌道に沿って一定間隔に配置されます。"
   versions:
     - "2.02"
     - "2.00"
@@ -547,6 +579,7 @@
   elem: Repeater
   key: RepeaterKey
   func: Begin0
+  description_md: "ストラクチャーの連続配置を[現在の距離程](http://bvets.net/jp/edit/formats/route/map.html#distance)から開始します。Repeater[].Begin 構文の x, y, z, rx, ry, rz に 0 を設定したことと同じです。"
   versions:
     - "2.02"
     - "2.00"
@@ -573,6 +606,7 @@
 - elem: Repeater
   key: RepeaterKey
   func: End
+  description_md: "ストラクチャーの連続配置を[現在の距離程](http://bvets.net/jp/edit/formats/route/map.html#distance)で終了します。"
   versions:
     - "2.02"
     - "2.00"
@@ -583,6 +617,7 @@
     []
 - elem: Background
   func: Change
+  description_md: "背景を変更します。"
   versions:
     - "2.02"
     - "2.00"
@@ -596,6 +631,7 @@
     - "StructureKey"
 - elem: Station
   func: Load
+  description_md: "[停車場リストファイル](http://bvets.net/jp/edit/formats/route/station.html)にもとづいて停車場を定義します。"
   skip_test: true
   versions:
     - "2.02"
@@ -611,6 +647,7 @@
 - elem: Station
   key: StationKey
   func: Put
+  description_md: "この列車の停止位置を[現在の距離程](http://bvets.net/jp/edit/formats/route/map.html#distance)に設定します。列車停止位置目標ストラクチャーを設置するには Structure.Put を使用してください。"
   versions:
     - "2.02"
     - "2.00"
@@ -633,6 +670,7 @@
 - _comment: "signalに関しては手動で対応する。"
   elem: Section
   func: Begin
+  description_md: "新しい閉そくを[現在の距離程](http://bvets.net/jp/edit/formats/route/map.html#distance)から開始します。"
   skip_test: true
   versions:
     - "2.02"
@@ -643,6 +681,7 @@
 - _comment: "signalに関しては手動で対応する。"
   elem: Section
   func: Beginnew
+  description_md: "新しい閉そくを[現在の距離程](http://bvets.net/jp/edit/formats/route/map.html#distance)から開始します。"
   skip_test: true
   deprecated: true
   inheritance: SectionBegin
@@ -657,6 +696,7 @@
 - _comment: "vに関しては手動で対応する。"
   elem: Section
   func: Setspeedlimit
+  description_md: "信号現示の許容速度を設定します。"
   skip_test: true
   versions:
     - "2.02"
@@ -667,6 +707,7 @@
 - _comment: "vに関しては手動で対応する。"
   elem: Signal
   func: Speedlimit
+  description_md: "信号現示の許容速度を設定します。"
   skip_test: true
   deprecated: true
   inheritance: SectionSetspeedlimit
@@ -681,6 +722,7 @@
 - _comment: "vに関しては手動で対応する。"
   elem: Speedlimit
   func: Setsignal
+  description_md: "信号現示の許容速度を設定します。"
   skip_test: true
   deprecated: true
   inheritance: SectionSetspeedlimit
@@ -694,6 +736,7 @@
     []
 - elem: Signal
   func: Load
+  description_md: "[信号現示リストファイル](http://bvets.net/jp/edit/formats/route/signal.html)にもとづいて信号現示を定義します。"
   skip_test: true
   versions:
     - "2.02"
@@ -709,6 +752,7 @@
 - elem: Signal
   key: SignalAspectKey
   func: Put
+  description_md: "地上信号機を[現在の距離程](http://bvets.net/jp/edit/formats/route/map.html#distance)に設置します。"
   skip_test: true
   versions:
     - "2.02"
@@ -760,6 +804,7 @@
     - "Section,TrackKey,X,Y,Z,RX,RY,RZ,Tilt,Span"
 - elem: Beacon
   func: Put
+  description_md: "地上子の送信イベントを[現在の距離程](http://bvets.net/jp/edit/formats/route/map.html#distance)に定義します。地上子ストラクチャーを設置するには Structure[].Put 構文を使用してください。"
   versions:
     - "2.02"
     - "2.00"
@@ -781,6 +826,7 @@
     - "Type,Section,SendData"
 - elem: Speedlimit
   func: Begin
+  description_md: "速度制限を[現在の距離程](http://bvets.net/jp/edit/formats/route/map.html#distance)から開始します。速度制限標識ストラクチャーを設置するには Structure.Put 構文を使用してください。"
   versions:
     - "2.02"
     - "2.00"
@@ -794,6 +840,7 @@
     - "V"
 - elem: Speedlimit
   func: End
+  description_md: "速度制限を[現在の距離程](http://bvets.net/jp/edit/formats/route/map.html#distance)で終了します。速度制限解除標識ストラクチャーを設置するには Structure.Put 構文を使用してください。"
   versions:
     - "2.02"
     - "2.00"
@@ -804,6 +851,7 @@
     []
 - elem: Pretrain
   func: Pass
+  description_md: "先行列車が[現在の距離程](http://bvets.net/jp/edit/formats/route/map.html#distance)を通過する時刻を設定します。"
   skip_test: true
   versions:
     - "2.02"
@@ -823,6 +871,7 @@
     - "Second"
 - elem: Light
   func: Ambient
+  description_md: "環境光の色 (アンビエント色) を設定します。この構文は、マップファイルに 1 回のみ記述可能です。"
   versions:
     - "2.02"
     - "2.00"
@@ -844,6 +893,7 @@
     - "Red,Green,Blue"
 - elem: Light
   func: Diffuse
+  description_md: "平行光の色 (ディフューズ色) を設定します。この構文は、マップファイルに 1 回のみ記述可能です。"
   versions:
     - "2.02"
     - "2.00"
@@ -865,6 +915,7 @@
     - "Red,Green,Blue"
 - elem: Light
   func: Direction
+  description_md: "距離程 0 において、平行光が指す方向を設定します。この構文は、マップファイルに 1 回のみ記述可能です。"
   versions:
     - "2.02"
     - "2.00"
@@ -882,6 +933,7 @@
     - "Pitch,Yaw"
 - elem: Fog
   func: Interpolate
+  description_md: "[現在の距離程](http://bvets.net/jp/edit/formats/route/map.html#distance)における霧効果を設定します。2 つの Fog.Interpolate の間は線形補間されます。"
   skip_test: true
   versions:
     - "2.02"
@@ -908,6 +960,7 @@
     - "Density,Red,Green,Blue"
 - elem: Fog
   func: Set
+  description_md: "[現在の距離程](http://bvets.net/jp/edit/formats/route/map.html#distance)における霧効果を設定します。2 つの Fog.Interpolate の間は線形補間されます。"
   skip_test: true
   deprecated: true
   inheritance: FogInterpolate
@@ -936,6 +989,7 @@
     - "Density,Red,Green,Blue"
 - elem: Drawdistance
   func: Change
+  description_md: "[現在の距離程](http://bvets.net/jp/edit/formats/route/map.html#distance)以降の風景の描画距離を設定します。[設定] ウィンドウで設定される描画距離と、ここで設定する描画距離の短い方が適用されます。"
   versions:
     - "2.02"
   args:
@@ -947,6 +1001,7 @@
     - "Value"
 - elem: Cabilluminance
   func: Interpolate
+  description_md: "[現在の距離程](http://bvets.net/jp/edit/formats/route/map.html#distance)における運転台の明るさを設定します。2 つの CabIlluminance.Interpolate の間は線形補間されます。"
   versions:
     - "2.02"
   args:
@@ -959,6 +1014,7 @@
     - "Value"
 - elem: Cabilluminance
   func: Set
+  description_md: "[現在の距離程](http://bvets.net/jp/edit/formats/route/map.html#distance)における運転台の明るさを設定します。2 つの CabIlluminance.Interpolate の間は線形補間されます。"
   deprecated: true
   inheritance: CabilluminanceInterpolate
   versions:
@@ -974,6 +1030,7 @@
     - "Value"
 - elem: Irregularity
   func: Change
+  description_md: "[現在の距離程](http://bvets.net/jp/edit/formats/route/map.html#distance)以降の軌道変位を設定します。"
   versions:
     - "2.02"
     - "2.00"
@@ -1007,6 +1064,7 @@
     - "X,Y,R,LX,LY,LR"
 - elem: Adhesion
   func: Change
+  description_md: "[現在の距離程](http://bvets.net/jp/edit/formats/route/map.html#distance)以降の車輪-レール間の粘着特性を設定します。"
   versions:
     - "2.02"
     - "2.00"
@@ -1029,6 +1087,7 @@
     - "A,B,C"
 - elem: Sound
   func: Load
+  description_md: "[サウンドリストファイル](http://bvets.net/jp/edit/formats/route/sound.html)にもとづいてサウンドを読み込みます。"
   skip_test: true
   versions:
     - "2.02"
@@ -1044,6 +1103,7 @@
 - elem: Sound
   key: SoundKey
   func: Play
+  description_md: "[現在の距離程](http://bvets.net/jp/edit/formats/route/map.html#distance)を通過するときにサウンドを 1 回再生します。"
   versions:
     - "2.02"
     - "2.00"
@@ -1054,6 +1114,7 @@
     []
 - elem: Sound3d
   func: Load
+  description_md: "[サウンドリストファイル](http://bvets.net/jp/edit/formats/route/sound.html)にもとづいてサウンドを読み込みます。"
   skip_test: true
   versions:
     - "2.02"
@@ -1069,6 +1130,7 @@
 - elem: Sound3d
   key: SoundKey
   func: Put
+  description_md: "地上に固定された音源を[現在の距離程](http://bvets.net/jp/edit/formats/route/map.html#distance)に設置します。サウンドは連続再生されます。"
   skip_test: true
   versions:
     - "2.02"
@@ -1087,6 +1149,7 @@
     - "X,Y"
 - elem: Rollingnoise
   func: Change
+  description_md: "[現在の距離程](http://bvets.net/jp/edit/formats/route/map.html#distance)以降の車輪転動音を設定します。"
   versions:
     - "2.02"
     - "2.00"
@@ -1100,6 +1163,7 @@
     - "Index"
 - elem: Flangenoise
   func: Change
+  description_md: "[現在の距離程](http://bvets.net/jp/edit/formats/route/map.html#distance)以降のフランジきしり音を設定します。"
   versions:
     - "2.02"
     - "2.00"
@@ -1113,6 +1177,7 @@
     - "Index"
 - elem: Jointnoise
   func: Play
+  description: "[現在の距離程](http://bvets.net/jp/edit/formats/route/map.html#distance)を通過するときに分岐器通過音を走行速度に応じて再生します。"
   versions:
     - "2.02"
     - "2.00"
@@ -1126,6 +1191,7 @@
     - "Index"
 - elem: Train
   func: Add
+  description_md: "[他列車ファイル](http://bvets.net/jp/edit/formats/route/train.html)にもとづいて他列車を定義します。"
   skip_test: true
   versions:
     - "2.02"
@@ -1153,6 +1219,7 @@
 - elem: Train
   key: TrainKey
   func: Load
+  description_md: "[他列車ファイル](http://bvets.net/jp/edit/formats/route/train.html)にもとづいて他列車を定義します。"
   skip_test: true
   versions:
     - "2.02"
@@ -1174,6 +1241,7 @@
 - elem: Train
   key: TrainKey
   func: Enable
+  description_md: "自列車が[現在の距離程](http://bvets.net/jp/edit/formats/route/map.html#distance)を通過し、かつ設定された時刻になったとき、他列車の動作を有効にします。"
   skip_test: true
   versions:
     - "2.02"
@@ -1194,6 +1262,7 @@
 - elem: Train
   key: TrainKey
   func: Stop
+  description_md: "他列車を[現在の距離程](http://bvets.net/jp/edit/formats/route/map.html#distance)に一旦停車させます。"
   versions:
     - "2.02"
     - "2.00"
@@ -1220,6 +1289,7 @@
 - elem: Train
   key: TrainKey
   func: Settrack
+  description_md: "他列車の走行する軌道を設定します。"
   versions:
     - "2.02"
     - "2.00"
@@ -1237,6 +1307,7 @@
     - "TrackKey,Direction"
 - elem: Legacy
   func: Fog
+  description: "霧効果を設定します。複数記述した Fog.Set 構文の間は線形補間されます。"
   deprecated: true
   versions:
     - "2.02"
@@ -1269,6 +1340,7 @@
     - "FogStart,Fogend,red,green,blue"
 - elem: Legacy
   func: Curve
+  description: "平面曲線の円曲線を[現在の距離程](http://bvets.net/jp/edit/formats/route/map.html#distance)から開始します。"
   deprecated: true
   versions:
     - "2.02"
@@ -1287,6 +1359,7 @@
     - "radius,cant"
 - elem: Legacy
   func: Pitch
+  description: "縦曲線を[現在の距離程](http://bvets.net/jp/edit/formats/route/map.html#distance)で終了し、勾配を一定に保ちます。"
   versions:
     - "2.02"
     - "2.00"
@@ -1301,6 +1374,7 @@
     - "rate"
 - elem: Legacy
   func: Turn
+  description: "[現在の距離程](http://bvets.net/jp/edit/formats/route/map.html#distance)以降の自軌道の向きを設定します。"
   deprecated: true
   versions:
     - "2.02"
@@ -1314,6 +1388,7 @@
   argPatterns:
     - "slope"
 - elem: Include
+  description: "指定されたパスのマップファイルの内容を構文の位置に挿入します。挿入するマップファイルにもヘッダーが必要です。ただし、ヘッダーは挿入されません。"
   skip_test: true
   versions:
     - "2.02"
