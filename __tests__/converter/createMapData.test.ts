@@ -8,6 +8,7 @@ describe('createMapData()', () => {
         statement = {
             elem: 'Element',
             key: 'Key',
+            description_md: 'description',
             sub_elem: 'SubElement',
             func: 'Function',
             versions: [],
