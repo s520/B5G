@@ -24,4 +24,9 @@ export interface IArgument extends IArgumentDefinition {
      * C#用テスト値
      */
     test_value_csharp: string
+
+    /**
+     * Typeがlistのときに使用する可変長引数
+     */
+    inner_arguments: IArgument[] | null
 }
