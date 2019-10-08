@@ -29,9 +29,7 @@ const convertArgument = (argDef: IArgumentDefinition): IArgument => {
 
     // テスト値の設定
     const targetType = ArgumentType.allTypes.find(type => type.isType(argument.type))!
-    argument.test_value_map_grammar = targetType.bve5TestValue
-    argument.test_value_map_grammar_non_quote = targetType.rowTestValue
-    argument.test_value_csharp = targetType.csharpTestValue
+    targetType.setTestValue(argument)
 
     return argument
 }

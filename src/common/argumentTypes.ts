@@ -1,3 +1,4 @@
+import { IArgument } from '../definition/iArgument'
 
 /**
  * 引数の型定義
@@ -67,5 +68,16 @@ export class ArgumentType {
      */
     public isType(type: string): boolean {
         return type.trim().replace('?', '').toLowerCase() === this.typeName.toLowerCase()
+    }
+
+    /**
+     * 引数にテスト値をセットして返します。
+     * @param arg iArgument
+     */
+    public setTestValue(arg: IArgument): IArgument {
+        arg.test_value_map_grammar = this.bve5TestValue
+        arg.test_value_map_grammar_non_quote = this.rowTestValue
+        arg.test_value_csharp = this.csharpTestValue
+        return arg
     }
 }
