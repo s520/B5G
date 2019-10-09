@@ -25,8 +25,10 @@ export interface IArgument extends IArgumentDefinition {
      */
     test_value_csharp: string
 
+    //#region list用
     /**
      * Typeがlistのときに使用する可変長引数
      */
     inner_arguments: IArgument[] | null
+    //#endregion
 }
