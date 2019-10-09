@@ -3,63 +3,26 @@ import { IArgument } from '../definition/iArgument'
 /**
  * 引数の型定義
  */
-export class ArgumentType {
-
-    /**
-     * Double
-     */
-    public static double = new ArgumentType('Double', '1.0', val => val, val => val)
-
-    /**
-     * String
-     */
-    public static string = new ArgumentType(
-        'String',
-        'string_test_value',
-        val => `'${val}'`,
-        val => `"${val}"`)
-
-    /**
-     * 全ての型
-     */
-    public static get allTypes(): ArgumentType[] {
-        return [this.double, this.string]
-    }
-
+export abstract class ArgumentType {
     /**
      * 型名
      */
-    public get type(): string {
-        return this.typeName
-    }
+    public abstract get type(): string
 
     /**
      * テストに用いる加工なしの値
      */
-    public get rowTestValue(): string {
-        return this.testValue
-    }
+    public abstract get rowTestValue(): string
 
     /**
      * BVE5の構文上で引数と認識される形式のテスト値
      */
-    public get bve5TestValue(): string {
-        return this.toBve5TestValue(this.testValue)
-    }
+    public abstract get bve5TestValue(): string
 
     /**
      * C#上で認識される形式のテスト値
      */
-    public get csharpTestValue(): string {
-        return this.toCsharpTestValue(this.testValue)
-    }
-
-    private constructor(
-        private readonly typeName: string,
-        private readonly testValue: string,
-        private readonly toBve5TestValue: (testValue: string) => string,
-        private readonly toCsharpTestValue: (testValue: string) => string
-    ) {}
+    public abstract get csharpTestValue(): string
 
     /**
      * 引数に与えられた型名と一致するか？
@@ -67,7 +30,7 @@ export class ArgumentType {
      * @param type 型名
      */
     public isType(type: string): boolean {
-        return type.trim().replace('?', '').toLowerCase() === this.typeName.toLowerCase()
+        return type.trim().replace('?', '').toLowerCase() === this.type.toLowerCase()
     }
 
     /**
