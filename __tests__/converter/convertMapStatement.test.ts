@@ -13,7 +13,8 @@ describe('convertMapStatement()', () => {
             name: 'Argument',
             type: 'string',
             desc: 'test argument',
-            opt: false
+            opt: false,
+            counter_first: undefined
         }
         mapDefinition = {
             elem: 'Element',

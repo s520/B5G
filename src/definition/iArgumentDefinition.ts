@@ -26,6 +26,6 @@ export interface IArgumentDefinition {
     /**
      * 可変長引数の末尾に付ける番号(採番)の最初の数
      */
-    counter_first: number
+    counter_first: number | undefined
     //#endregion
 }

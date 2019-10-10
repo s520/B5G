@@ -16,7 +16,8 @@ describe('convertArguments', () => {
         name: 'test',
         type: 'string',
         desc: 'test argument',
-        opt: false
+        opt: false,
+        counter_first: undefined
     })
 
     it('no argument', () => {
