@@ -18,3 +18,5 @@ export class Double extends ArgumentType {
         return this.rowTestValue
     }
 }
+
+export const double = new Double()
