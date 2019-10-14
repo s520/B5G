@@ -1,8 +1,8 @@
 import { ArgumentType } from './argumentType'
-import { double } from './double'
+import { doubleArgument } from './doubleArgument'
 import { stringArgument } from './stringArgument'
 
 export const allTypes: ArgumentType[] = [
-    double,
+    doubleArgument,
     stringArgument
 ]
