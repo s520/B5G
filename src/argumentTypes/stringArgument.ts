@@ -11,11 +11,11 @@ export class StringArgument extends ArgumentType {
     }
 
     public get bve5TestValue(): string {
-        return this.rowTestValue
+        return `'${this.rowTestValue}'`
     }
 
     public get csharpTestValue(): string {
-        return this.rowTestValue
+        return `"${this.rowTestValue}"`
     }
 }
 
