@@ -1,7 +1,9 @@
-import { ArgumentType } from '../../src/common/argumentTypes';
+import { ArgumentType } from '../../src/argumentTypes/argumentType';
 import { convertArguments } from '../../src/converter/convertArgument'
 import { IArgumentDefinition } from '../../src/definition/iArgumentDefinition';
 import { IArgument } from '../../src/definition/iArgument';
+import { doubleArgument } from '../../src/argumentTypes/doubleArgument';
+import { stringArgument } from '../../src/argumentTypes/stringArgument';
 
 const testValueCheck = (argument: IArgument, type: ArgumentType): void => {
     expect(argument.test_value_map_grammar).toBe(type.bve5TestValue)
@@ -30,7 +32,7 @@ describe('convertArguments', () => {
         expect(arg.length).toBe(1)
         expect(arg[0]).toMatchObject(argDefinition)
         expect(arg[0].last).toBeTruthy()
-        testValueCheck(arg[0], ArgumentType.string)
+        testValueCheck(arg[0], stringArgument)
     })
 
     it('multiple argument', () => {
@@ -48,12 +50,12 @@ describe('convertArguments', () => {
         expect(args.length).toBe(argDefs.length)
         expect(args[0]).toMatchObject(argDefs[0])
         expect(args[0].last).toBeFalsy()
-        testValueCheck(args[0], ArgumentType.double)
+        testValueCheck(args[0], doubleArgument)
         expect(args[1]).toMatchObject(argDefs[1])
         expect(args[1].last).toBeFalsy()
-        testValueCheck(args[1], ArgumentType.string)
+        testValueCheck(args[1], stringArgument)
         expect(args[2]).toMatchObject(argDefs[2])
         expect(args[2].last).toBeTruthy()
-        testValueCheck(args[2], ArgumentType.string)
+        testValueCheck(args[2], stringArgument)
     })
 })
