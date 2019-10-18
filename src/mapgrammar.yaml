@@ -540,6 +540,8 @@
       type: "double?"
       desc: "配置間隔 [m]"
       opt: false
+    - name: "structureKey"
+      type: "list"
   argPatterns:
     - "TrackKey,X,Y,Z,RX,RY,RZ,Tilt,Span,Interval"
 - _comment: "structureKeyに関しては手動で対応する。"
