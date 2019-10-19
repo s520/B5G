@@ -71,7 +71,9 @@ export class ListArgument extends ArgumentType {
                 } as IArgument)
         ).toArray()
 
+        args[0].opt = false
         args.slice(-1)[0].last = true
+
         return args
     }
 }
