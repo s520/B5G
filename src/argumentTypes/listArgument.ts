@@ -26,6 +26,19 @@ export class ListArgument extends ArgumentType {
         return this.rowTestValue
     }
 
+    public setTestValue(arg: IArgument): IArgument {
+        // TODO: ここで引数を生成する前にバリデートが必要
+        arg.inner_arguments = this.generateRangeArgs(
+            arg.name,
+            arg.desc,
+            listArgument,
+            arg.counter_first!,
+            generateArgumentCount
+        )
+
+        return super.setTestValue(arg)
+    }
+
     /**
      * 可変長引数を生成して返します。
      * @param name 引数名
