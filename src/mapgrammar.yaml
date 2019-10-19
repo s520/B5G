@@ -542,6 +542,9 @@
       opt: false
     - name: "structureKey"
       type: "list"
+      desc: "ストラクチャー名 (ストラクチャーリストファイルで定義した文字列）"
+      opt: false
+      counter_first: 1
   argPatterns:
     - "TrackKey,X,Y,Z,RX,RY,RZ,Tilt,Span,Interval"
 - _comment: "structureKeyに関しては手動で対応する。"
