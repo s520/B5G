@@ -69,10 +69,10 @@ export class ListArgument extends ArgumentType {
                     test_value_csharp: type.csharpTestValue,
                     inner_arguments: null
                 } as IArgument)
-        )
+        ).toArray()
 
-        args.last().last = true
-        return args.toArray()
+        args.slice(-1)[0].last = true
+        return args
     }
 }
 
