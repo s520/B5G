@@ -2,6 +2,7 @@ import * as Enumerable from 'linq'
 
 import { ArgumentType } from './argumentType'
 import { IArgument } from '../definition/iArgument'
+import { allTypes } from './allTypes'
 
 /**
  * 可変長引数をテスト用に生成する数
@@ -31,7 +32,7 @@ export class ListArgument extends ArgumentType {
         arg.inner_arguments = this.generateRangeArgs(
             arg.name,
             arg.desc,
-            listArgument,
+            allTypes.find(t => t.isType(arg.inner_type!))!,
             arg.counter_first!,
             generateArgumentCount
         )
