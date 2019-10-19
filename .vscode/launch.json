@@ -23,7 +23,7 @@
       "name": "ts-node[debug]",
       "program": "${workspaceFolder}/node_modules/ts-node/dist/bin.js",
       "args": [
-        "${workspaceFolder}/src/create.ts"
+        "${workspaceFolder}/src/output.ts"
       ],
       "console": "integratedTerminal"
     },
