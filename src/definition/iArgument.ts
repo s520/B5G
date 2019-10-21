@@ -26,6 +26,12 @@ export interface IArgument extends IArgumentDefinition {
     test_value_csharp: string
 
     //#region list用
+
+    /**
+     * 引数の型がlistか？
+     */
+    isList: boolean
+
     /**
      * Typeがlistのときに使用する可変長引数
      */
