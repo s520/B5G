@@ -540,7 +540,7 @@
       type: "double?"
       desc: "配置間隔 [m]"
       opt: false
-    - name: "structureKey"
+    - name: "StructureKey"
       type: "list"
       desc: "ストラクチャー名 (ストラクチャーリストファイルで定義した文字列）"
       opt: false
