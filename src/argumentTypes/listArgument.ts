@@ -56,9 +56,9 @@ export class ListArgument extends ArgumentType {
         count: number
     ): IArgument[] {
         const args = Enumerable.range(start, count).select(
-            counter =>
+            _ =>
                 ({
-                    name: `${name}${counter}`,
+                    name: name,
                     type: type.type,
                     desc: description,
                     opt: true,
