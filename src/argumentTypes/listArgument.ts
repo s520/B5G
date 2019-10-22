@@ -67,6 +67,7 @@ export class ListArgument extends ArgumentType {
                     test_value_map_grammar: type.bve5TestValue,
                     test_value_map_grammar_non_quote: type.rowTestValue,
                     test_value_csharp: type.csharpTestValue,
+                    isList: this.isType(type.type),
                     inner_arguments: null
                 } as IArgument)
         ).toArray()
