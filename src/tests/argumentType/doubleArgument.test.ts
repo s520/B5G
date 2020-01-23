@@ -1,4 +1,6 @@
 import { doubleArgument } from '../../argumentTypes/doubleArgument'
+import { createEmptyArgument } from '../helper/empty_argument'
+import { assertSetIArgumentTestValue } from '../helper/assert_set_iargument_testvalue'
 
 describe('Double', () => {
 
@@ -37,6 +39,12 @@ describe('Double', () => {
         it('double csharp value', () => {
             const numberRegex = /^[+,-]?([1-9]\d*|0)(\.\d+)?$/
             expect(numberRegex.test(doubleArgument.csharpTestValue)).toBeTruthy()
+        })
+    })
+
+    describe('setTestValue', () => {
+        it('check set values', () => {
+            assertSetIArgumentTestValue(doubleArgument.setTestValue(createEmptyArgument()), doubleArgument)
         })
     })
 })
