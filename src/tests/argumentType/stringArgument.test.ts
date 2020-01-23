@@ -1,4 +1,6 @@
 import { stringArgument } from '../../argumentTypes/stringArgument'
+import { assertSetIArgumentTestValue } from '../helper/assert_set_iargument_testvalue'
+import { createEmptyArgument } from '../helper/empty_argument'
 
 describe('String', () => {
 
@@ -35,6 +37,12 @@ describe('String', () => {
     describe('csharpTestValue', () => {
         it('string charp value', () => {
             expect(stringArgument.csharpTestValue).toBe(`"${stringArgument.rowTestValue}"`)
+        })
+    })
+
+    describe('setTestValue', () => {
+        it('check set values', () => {
+            assertSetIArgumentTestValue(stringArgument.setTestValue(createEmptyArgument()), stringArgument)
         })
     })
 })
