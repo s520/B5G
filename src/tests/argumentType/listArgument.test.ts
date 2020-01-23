@@ -1,7 +1,5 @@
 import { listArgument } from '../../argumentTypes/listArgument'
 
-const notSupportedErrorRegex = /is\s*not\s*supported/
-
 describe('List', () => {
 
     describe('isType()', () => {
@@ -29,20 +27,20 @@ describe('List', () => {
     })
 
     describe('rowTestValue', () => {
-        it('throws not supported error', () => {
-            expect(() => listArgument.rowTestValue).toThrow(notSupportedErrorRegex)
+        it('returns dummy value', () => {
+            expect(listArgument.rowTestValue).toBe('dummy')
         })
     })
 
     describe('bve5TestValue', () => {
-        it('throws not supported error', () => {
-            expect(() => listArgument.bve5TestValue).toThrow(notSupportedErrorRegex)
+        it('returns dummy value', () => {
+            expect(listArgument.bve5TestValue).toBe('dummy')
         })
     })
 
     describe('csharpTestValue', () => {
-        it('throws not supported error', () => {
-            expect(() => listArgument.csharpTestValue).toThrow(notSupportedErrorRegex)
+        it('returns dummy value', () => {
+            expect(listArgument.csharpTestValue).toBe('dummy')
         })
     })
 })
