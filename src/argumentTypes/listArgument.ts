@@ -15,16 +15,18 @@ export class ListArgument extends ArgumentType {
         return 'List'
     }
 
+    // FIXME: rowTestValue, bve5TestValue, csharpTestValueはlistだと使わないが抽象クラスで実装されているので必ず実装する必要がある。
+    // 使わないプロパティを強制実装される設計がアレなので修正したい
     public get rowTestValue(): string {
-        return 'todo'
+        throw new Error('listArgument.rowTestValue() is not supported. Use listArgument.setTestValue()')
     }
 
     public get bve5TestValue(): string {
-        return this.rowTestValue
+        throw new Error('listArgument.bve5TestValue() is not supported. Use listArgument.setTestValue()')
     }
 
     public get csharpTestValue(): string {
-        return this.rowTestValue
+        throw new Error('listArgument.csharpTestValue() is not supported. Use listArgument.setTestValue()')
     }
 
     public setTestValue(arg: IArgument): IArgument {
