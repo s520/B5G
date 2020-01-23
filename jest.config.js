@@ -6,5 +6,10 @@ module.exports = {
     "**/src/**/*.ts",
     "!**/node_modules/**"
   ],
-  
+  transform: {
+    '^.+\\.ts$': 'ts-jest'
+  },
+  testMatch: [
+    '**/tests/**/*.test.ts'
+  ]
 };
