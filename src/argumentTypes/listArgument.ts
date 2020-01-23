@@ -8,7 +8,7 @@ import { allTypes } from './allTypes'
  * 可変長引数をテスト用に生成する数
  * 今は固定だがゆくゆくは可変にしたい
  */
-const generateArgumentCount = 5
+export const generateArgumentCount = 5
 
 export class ListArgument extends ArgumentType {
     public get type(): string {
