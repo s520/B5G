@@ -491,8 +491,7 @@
   argPatterns:
     - "TrackKey1,TrackKey2"
     - "TrackKey1,TrackKey2,Flag"
-- _comment: "structureKeyに関しては手動で対応する。"
-  elem: Repeater
+- elem: Repeater
   key: RepeaterKey
   func: Begin
   versions:
@@ -540,10 +539,15 @@
       type: "double?"
       desc: "配置間隔 [m]"
       opt: false
+    - name: "StructureKey"
+      type: "list"
+      desc: "ストラクチャー名 (ストラクチャーリストファイルで定義した文字列）"
+      opt: false
+      counter_first: 1
+      inner_type: string
   argPatterns:
-    - "TrackKey,X,Y,Z,RX,RY,RZ,Tilt,Span,Interval"
-- _comment: "structureKeyに関しては手動で対応する。"
-  elem: Repeater
+    - "TrackKey,X,Y,Z,RX,RY,RZ,Tilt,Span,Interval,StructureKey"
+- elem: Repeater
   key: RepeaterKey
   func: Begin0
   versions:
@@ -567,8 +571,14 @@
       type: "double?"
       desc: "配置間隔 [m]"
       opt: false
+    - name: "StructureKey"
+      type: "list"
+      desc: "ストラクチャー名 (ストラクチャーリストファイルで定義した文字列）"
+      opt: false
+      counter_first: 1
+      inner_type: string
   argPatterns:
-    - "TrackKey,Tilt,Span,Interval"
+    - "TrackKey,Tilt,Span,Interval,StructureKey"
 - elem: Repeater
   key: RepeaterKey
   func: End
@@ -629,18 +639,21 @@
       opt: false
   argPatterns:
     - "Door,Margin1,Margin2"
-- _comment: "signalに関しては手動で対応する。"
-  elem: Section
+- elem: Section
   func: Begin
   skip_test: true
   versions:
     - "2.02"
   args:
-    []
+    - name: "Signal"
+      type: "list"
+      desc: "先行列車が n 閉そく先に存在する場合の信号インデックス（0: この閉塞）"
+      opt: false
+      counter_first: 0
+      inner_type: double?
   argPatterns:
-    []
-- _comment: "signalに関しては手動で対応する。"
-  elem: Section
+    - "Signal"
+- elem: Section
   func: Beginnew
   skip_test: true
   deprecated: true
@@ -650,21 +663,29 @@
     - "2.00"
     - "1.00"
   args:
-    []
+    - name: "Signal"
+      type: "list"
+      desc: "先行列車が n 閉そく先に存在する場合の信号インデックス（0: この閉塞）"
+      opt: false
+      counter_first: 0
+      inner_type: double?
   argPatterns:
-    []
-- _comment: "vに関しては手動で対応する。"
-  elem: Section
+    - "Signal"
+- elem: Section
   func: Setspeedlimit
   skip_test: true
   versions:
     - "2.02"
   args:
-    []
+    - name: "V"
+      type: "list"
+      desc: "走行速度 [km/h] （null: 許容速度なし）"
+      opt: false
+      counter_first: 0
+      inner_type: double?
   argPatterns:
-    []
-- _comment: "vに関しては手動で対応する。"
-  elem: Signal
+    - "V"
+- elem: Signal
   func: Speedlimit
   skip_test: true
   deprecated: true
@@ -674,11 +695,15 @@
     - "2.00"
     - "1.00"
   args:
-    []
+    - name: "V"
+      type: "list"
+      desc: "走行速度 [km/h] （null: 許容速度なし）"
+      opt: false
+      counter_first: 0
+      inner_type: double?
   argPatterns:
-    []
-- _comment: "vに関しては手動で対応する。"
-  elem: Speedlimit
+    - "V"
+- elem: Speedlimit
   func: Setsignal
   skip_test: true
   deprecated: true
@@ -688,9 +713,14 @@
     - "2.00"
     - "1.00"
   args:
-    []
+    - name: "V"
+      type: "list"
+      desc: "走行速度 [km/h] （null: 許容速度なし）"
+      opt: false
+      counter_first: 0
+      inner_type: double?
   argPatterns:
-    []
+    - "V"
 - elem: Signal
   func: Load
   skip_test: true

@@ -1,6 +1,7 @@
 import { IArgumentDefinition } from '../definition/iArgumentDefinition'
 import { IArgument } from '../definition/iArgument'
-import { ArgumentType } from '../common/argumentTypes'
+import { allTypes } from '../argumentTypes/allTypes'
+import { listArgument } from '../argumentTypes/listArgument'
 
 /**
  * IArgumentDefinitionに情報を付与したIArguementを生成して返します。
@@ -28,10 +29,11 @@ const convertArgument = (argDef: IArgumentDefinition): IArgument => {
     argument.last = false
 
     // テスト値の設定
-    const targetType = ArgumentType.allTypes.find(type => type.isType(argument.type))!
-    argument.test_value_map_grammar = targetType.bve5TestValue
-    argument.test_value_map_grammar_non_quote = targetType.rowTestValue
-    argument.test_value_csharp = targetType.csharpTestValue
+    const targetType = allTypes.find(type => type.isType(argument.type))!
+    targetType.setTestValue(argument)
+
+    // list型か？
+    argument.isList = listArgument.isType(argument.type)
 
     return argument
 }

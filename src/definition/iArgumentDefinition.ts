@@ -21,4 +21,16 @@ export interface IArgumentDefinition {
      * 省略可能な引数か？
      */
     opt: boolean
+
+    //#region list用
+    /**
+     * 可変長引数の末尾に付ける番号(採番)の最初の数
+     */
+    counter_first: number | undefined
+
+    /**
+     * 可変長引数の型
+     */
+    inner_type: string | undefined
+    //#endregion
 }
