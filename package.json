@@ -9,7 +9,7 @@
   ],
   "scripts": {
     "build": "tsc && npm run cpdef",
-    "prepare": "npm run build",
+    "postinstall": "npm run build",
     "cpdef": "cpx src/mapgrammar.yaml ./out",
     "cpdef_watch": "cpx src/mapgrammar.yaml ./out --watch",
     "test": "jest",
