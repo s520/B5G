@@ -1,5 +1,5 @@
 import { convertArguments } from '../../converter/convertArgument'
-import { IArgumentDefinition } from '../../definition/iArgumentDefinition'
+import { IArgumentDefinition } from '../../definition/arguments/i_argument_definition'
 import { doubleArgument } from '../../argumentTypes/doubleArgument'
 import { stringArgument } from '../../argumentTypes/stringArgument'
 import { assertSetIArgumentTestValue } from '../helper/assert_set_iargument_testvalue'

@@ -1,4 +1,4 @@
-import { IArgumentDefinition } from './iArgumentDefinition'
+import { IArgumentDefinition } from '../definition/arguments/i_argument_definition'
 
 /**
  * 引数定義

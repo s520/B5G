@@ -1,4 +1,4 @@
-import { IArgument } from '../definition/iArgument'
+import { IArgument } from '../arguments/iArgument'
 
 /**
  * 引数の型定義

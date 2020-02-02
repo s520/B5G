@@ -1,7 +1,7 @@
 import * as Enumerable from 'linq'
 
 import { ArgumentType } from './argumentType'
-import { IArgument } from '../definition/iArgument'
+import { IArgument } from '../arguments/iArgument'
 import { allTypes } from './allTypes'
 
 /**

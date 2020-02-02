@@ -1,5 +1,5 @@
-import { IArgumentDefinition } from '../definition/iArgumentDefinition'
-import { IArgument } from '../definition/iArgument'
+import { IArgumentDefinition } from '../definition/arguments/i_argument_definition'
+import { IArgument } from '../arguments/iArgument'
 import { allTypes } from '../argumentTypes/allTypes'
 import { listArgument } from '../argumentTypes/listArgument'
 

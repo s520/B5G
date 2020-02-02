@@ -1,5 +1,5 @@
-import { IMapDefinition } from './iMapDefinition'
-import { IArgumentPattern } from './iArgumentPattern'
+import { IMapDefinition } from '../definition/iMapDefinition'
+import { IArgumentPattern } from '../arguments/iArgumentPattern'
 
 /**
  * IMapDefinitionから付加情報を追加したマップ構文定義
