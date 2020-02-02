@@ -1,4 +1,5 @@
 import { IArgument } from '../arguments/iArgument'
+import { IArgumentDefinition } from '../definition/arguments/i_argument_definition'
 
 /**
  * 引数の型定義
@@ -42,5 +43,26 @@ export abstract class ArgumentType {
         arg.test_value_map_grammar_non_quote = this.rowTestValue
         arg.test_value_csharp = this.csharpTestValue
         return arg
+    }
+
+    /**
+     * iArgumentDefinitionをiArgumentに変換します。
+     * @param argDef iArgumentDefinition
+     */
+    public convertDefinitionToArgument(argDef: IArgumentDefinition): IArgument {
+        const argument: IArgument = {
+            name: argDef.name,
+            type: argDef.type,
+            desc: argDef.desc,
+            opt: argDef.opt,
+            last: false,
+            test_value_map_grammar: this.bve5TestValue,
+            test_value_map_grammar_non_quote: this.rowTestValue,
+            test_value_csharp: this.csharpTestValue,
+            isList: false,
+            inner_arguments: null
+        }
+
+        return argument
     }
 }
