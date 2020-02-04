@@ -1,4 +1,4 @@
-import { createMapData } from '../../converter/createMapData'
+import { createMapData } from '../../converter/create-map-data'
 import { IMapStatement } from '../../statements/iMapStatement';
 
 describe('createMapData()', () => {

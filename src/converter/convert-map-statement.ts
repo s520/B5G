@@ -2,7 +2,7 @@ import linq from 'linq'
 
 import * as mapDef from '../definition/i-map-definition'
 import { IMapStatement } from '../statements/iMapStatement'
-import { convertArguments } from './convertArgument'
+import { convertArguments } from './convert-argument'
 import { IArgumentPattern } from '../arguments/i-argument-pattern'
 import { IArgument } from '../arguments/i-argument'
 import { isMapVersion1, isMapVersion2 } from '../headers/map-version-detector'

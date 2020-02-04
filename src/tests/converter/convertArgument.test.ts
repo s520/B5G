@@ -1,4 +1,4 @@
-import { convertArguments } from '../../converter/convertArgument'
+import { convertArguments } from '../../converter/convert-argument'
 import { IArgumentDefinition } from '../../definition/arguments/i-argument-definition'
 import { doubleArgument } from '../../argument-types/double-argument'
 import { stringArgument } from '../../argument-types/string-argument'
