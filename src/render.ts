@@ -1,4 +1,4 @@
-import mustache from 'mustache'
+import * as handlebars from 'handlebars'
 import stripBom from 'strip-bom'
 import { IMapData } from './mapdata/iMapData'
 
@@ -8,5 +8,6 @@ import { IMapData } from './mapdata/iMapData'
  * @param mapData 出力対象のデータ
  */
 export const render = (template: string, mapData: IMapData): string => {
-    return mustache.render(stripBom(template), mapData)
+    const compiledTemplate = handlebars.compile(template)
+    return compiledTemplate(mapData)
 }
