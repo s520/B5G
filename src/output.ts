@@ -1,4 +1,4 @@
-import { getDafaultMapData } from './defaultMapData'
+import { getDafaultMapData } from './default-map-data'
 
 // mapDataのテスト出力用
 getDafaultMapData().then(mapData => {
