@@ -2,7 +2,10 @@ import * as Enumerable from 'linq'
 
 import { ArgumentType } from './argumentType'
 import { IArgument } from '../arguments/iArgument'
+import { IArgumentDefinition } from '../definition/arguments/i_argument_definition'
 import { allTypes } from './allTypes'
+import { IVariableLengthArgumentDefinition } from '../definition/arguments/i_variable_length_argument_definition'
+import { IListArgument } from '../arguments/iListArgument'
 
 /**
  * 可変長引数をテスト用に生成する数
@@ -29,17 +32,31 @@ export class ListArgument extends ArgumentType {
         return this.rowTestValue
     }
 
-    public setTestValue(arg: IArgument): IArgument {
-        // TODO: ここで引数を生成する前にバリデートが必要
-        arg.inner_arguments = this.generateRangeArgs(
-            arg.name,
-            arg.desc,
-            allTypes.find(t => t.isType(arg.inner_type!))!,
-            arg.counter_first!,
-            generateArgumentCount
-        )
+    public convertDefinitionToArgument(argDef: IArgumentDefinition): IArgument {
+        // TODO: 本当にargDefがIVariableLengthArgumentDefinitionを実装しているか確認が必要
+        const vArgDef = argDef as IVariableLengthArgumentDefinition
 
-        return super.setTestValue(arg)
+        // FIX ME: 一旦super.convertDefinitionToArgumentでIArgumentを取得して、それをIListArgumentに変換できたほうがきれいなのでそうしたい
+        const argument: IListArgument = {
+            name: vArgDef.name,
+            type: vArgDef.type,
+            desc: vArgDef.desc,
+            opt: vArgDef.opt,
+            last: false,
+            test_value_map_grammar: this.bve5TestValue,
+            test_value_map_grammar_non_quote: this.rowTestValue,
+            test_value_csharp: this.csharpTestValue,
+            isList: false,
+            inner_arguments: this.generateRangeArgs(
+                vArgDef.name,
+                vArgDef.desc,
+                allTypes.find(t => t.isType(vArgDef.inner_type))!,
+                vArgDef.counter_first,
+                generateArgumentCount
+            )
+        }
+
+        return argument
     }
 
     /**
