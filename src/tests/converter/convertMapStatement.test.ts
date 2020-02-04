@@ -1,6 +1,6 @@
-import { IMapDefinition } from '../../definition/iMapDefinition'
+import { IMapDefinition } from '../../definition/i-map-definition'
 import { IArgument } from '../../arguments/i-argument'
-import { IArgumentDefinition } from '../../definition/arguments/i_argument_definition';
+import { IArgumentDefinition } from '../../definition/arguments/i-argument-definition';
 import { convertMapStatement } from '../../converter/convertMapStatement'
 
 // syntaxType等のUnitTestはiMapDefinition.test.tsで行う

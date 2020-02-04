@@ -1,4 +1,4 @@
-import { IMapDefinition } from './definition/iMapDefinition'
+import { IMapDefinition } from './definition/i-map-definition'
 import { convertMapStatement } from './converter/convertMapStatement'
 import { IMapData } from './mapdata/iMapData'
 import { createMapData } from './converter/createMapData'

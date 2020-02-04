@@ -1,4 +1,4 @@
-import { IMapDefinition } from '../definition/iMapDefinition'
+import { IMapDefinition } from '../definition/i-map-definition'
 import { IArgumentPattern } from '../arguments/i-argument-pattern'
 
 /**

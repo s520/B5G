@@ -3,7 +3,7 @@ import path from 'path'
 import * as yaml from 'js-yaml'
 
 import { IMapData } from './mapdata/iMapData';
-import { IMapDefinition } from './definition/iMapDefinition';
+import { IMapDefinition } from './definition/i-map-definition';
 import { convert } from './convert';
 
 /**

@@ -1,6 +1,6 @@
 import linq from 'linq'
 
-import * as mapDef from '../definition/iMapDefinition'
+import * as mapDef from '../definition/i-map-definition'
 import { IMapStatement } from '../statements/iMapStatement'
 import { convertArguments } from './convertArgument'
 import { IArgumentPattern } from '../arguments/i-argument-pattern'

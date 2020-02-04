@@ -1,8 +1,8 @@
 export { IArgument } from './arguments/i-argument'
-export { IArgumentDefinition } from './definition/arguments/i_argument_definition'
+export { IArgumentDefinition } from './definition/arguments/i-argument-definition'
 export { IArgumentPattern } from './arguments/i-argument-pattern'
 export { IMapData } from './mapdata/iMapData'
-export { IMapDefinition } from './definition/iMapDefinition'
+export { IMapDefinition } from './definition/i-map-definition'
 export { IMapStatement } from './statements/iMapStatement'
 
 export { convert } from './convert'

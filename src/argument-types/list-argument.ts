@@ -2,9 +2,9 @@ import * as Enumerable from 'linq'
 
 import { ArgumentType } from './argument-type'
 import { IArgument } from '../arguments/i-argument'
-import { IArgumentDefinition } from '../definition/arguments/i_argument_definition'
+import { IArgumentDefinition } from '../definition/arguments/i-argument-definition'
 import { allTypes } from './all-types'
-import { IVariableLengthArgumentDefinition } from '../definition/arguments/i_variable_length_argument_definition'
+import { IVariableLengthArgumentDefinition } from '../definition/arguments/i-variable-length-argument-definition'
 import { IListArgument } from '../arguments/i-list-argument'
 
 /**
