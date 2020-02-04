@@ -1,5 +1,5 @@
-import { IArgument } from '../arguments/iArgument'
-import { IArgumentDefinition } from '../definition/arguments/i_argument_definition'
+import { IArgument } from '../arguments/i-argument'
+import { IArgumentDefinition } from '../definition/arguments/i-argument-definition'
 
 /**
  * 引数の型定義

@@ -1,4 +1,4 @@
-import { IArgument } from './iArgument'
+import { IArgument } from './i-argument'
 
 /**
  * 構文の引数がとり得るパターン定義

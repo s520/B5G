@@ -1,5 +1,5 @@
-import { createMapData } from '../../converter/createMapData'
-import { IMapStatement } from '../../statements/iMapStatement';
+import { createMapData } from '../../converter/create-map-data'
+import { IMapStatement } from '../../statements/i-map-statement';
 
 describe('createMapData()', () => {
     let statement: IMapStatement

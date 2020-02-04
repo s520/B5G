@@ -1,8 +1,8 @@
-import { convertArguments } from '../../converter/convertArgument'
-import { IArgumentDefinition } from '../../definition/arguments/i_argument_definition'
-import { doubleArgument } from '../../argumentTypes/doubleArgument'
-import { stringArgument } from '../../argumentTypes/stringArgument'
-import { assertSetIArgumentTestValue } from '../helper/assert_set_iargument_testvalue'
+import { convertArguments } from '../../converter/convert-argument'
+import { IArgumentDefinition } from '../../definition/arguments/i-argument-definition'
+import { doubleArgument } from '../../argument-types/double-argument'
+import { stringArgument } from '../../argument-types/string-argument'
+import { assertSetIArgumentTestValue } from '../helper/assert-set-iargument-testvalue'
 
 describe('convertArguments', () => {
     let argDefinition: IArgumentDefinition

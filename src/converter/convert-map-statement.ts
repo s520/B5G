@@ -1,11 +1,11 @@
 import linq from 'linq'
 
-import * as mapDef from '../definition/iMapDefinition'
-import { IMapStatement } from '../statements/iMapStatement'
-import { convertArguments } from './convertArgument'
-import { IArgumentPattern } from '../arguments/iArgumentPattern'
-import { IArgument } from '../arguments/iArgument'
-import { isMapVersion1, isMapVersion2 } from '../common/mapVersionDetector'
+import * as mapDef from '../definition/i-map-definition'
+import { IMapStatement } from '../statements/i-map-statement'
+import { convertArguments } from './convert-argument'
+import { IArgumentPattern } from '../arguments/i-argument-pattern'
+import { IArgument } from '../arguments/i-argument'
+import { isMapVersion1, isMapVersion2 } from '../headers/map-version-detector'
 
 /**
  * マップ構文定義から必要な情報を付加したIMapStatementを返します。

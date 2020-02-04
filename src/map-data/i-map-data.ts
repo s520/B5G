@@ -1,4 +1,4 @@
-import { IMapStatement } from '../statements/iMapStatement'
+import { IMapStatement } from '../statements/i-map-statement'
 
 /**
  * テンプレートエンジンに食わせるマップデータ

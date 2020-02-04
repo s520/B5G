@@ -1,4 +1,4 @@
-import { IArgument } from './iArgument'
+import { IArgument } from './i-argument'
 
 /**
  * List型の引数を示します。

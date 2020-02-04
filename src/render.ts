@@ -1,6 +1,5 @@
 import * as handlebars from 'handlebars'
-import stripBom from 'strip-bom'
-import { IMapData } from './mapdata/iMapData'
+import { IMapData } from './map-data/i-map-data'
 
 /**
  * ステートメントをテンプレートに書き出します。

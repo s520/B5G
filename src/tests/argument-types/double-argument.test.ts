@@ -1,6 +1,6 @@
-import { doubleArgument } from '../../argumentTypes/doubleArgument'
-import { createEmptyArgument } from '../helper/empty_argument'
-import { assertSetIArgumentTestValue } from '../helper/assert_set_iargument_testvalue'
+import { doubleArgument } from '../../argument-types/double-argument'
+import { createEmptyArgument } from '../helper/empty-argument'
+import { assertSetIArgumentTestValue } from '../helper/assert-set-iargument-testvalue'
 
 describe('Double', () => {
 

@@ -1,11 +1,11 @@
 import * as Enumerable from 'linq'
 
-import { ArgumentType } from './argumentType'
-import { IArgument } from '../arguments/iArgument'
-import { IArgumentDefinition } from '../definition/arguments/i_argument_definition'
-import { allTypes } from './allTypes'
-import { IVariableLengthArgumentDefinition } from '../definition/arguments/i_variable_length_argument_definition'
-import { IListArgument } from '../arguments/iListArgument'
+import { ArgumentType } from './argument-type'
+import { IArgument } from '../arguments/i-argument'
+import { IArgumentDefinition } from '../definition/arguments/i-argument-definition'
+import { allTypes } from './all-types'
+import { IVariableLengthArgumentDefinition } from '../definition/arguments/i-variable-length-argument-definition'
+import { IListArgument } from '../arguments/i-list-argument'
 
 /**
  * 可変長引数をテスト用に生成する数

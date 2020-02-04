@@ -1,5 +1,5 @@
-import { IArgument } from '../../arguments/iArgument'
-import { ArgumentType } from '../../argumentTypes/argumentType'
+import { IArgument } from '../../arguments/i-argument'
+import { ArgumentType } from '../../argument-types/argument-type'
 
 /**
  * 引数に与えられたArgumentのテスト用値が引数に与えられた型と一致するか確認します。
