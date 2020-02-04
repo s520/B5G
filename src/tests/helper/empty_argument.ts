@@ -1,4 +1,4 @@
-import { IArgument } from '../../arguments/iArgument'
+import { IArgument } from '../../arguments/i-argument'
 
 /**
  * 空の引数を生成して返します。

@@ -1,5 +1,5 @@
 import { IMapDefinition } from '../../definition/iMapDefinition'
-import { IArgument } from '../../arguments/iArgument'
+import { IArgument } from '../../arguments/i-argument'
 import { IArgumentDefinition } from '../../definition/arguments/i_argument_definition';
 import { convertMapStatement } from '../../converter/convertMapStatement'
 

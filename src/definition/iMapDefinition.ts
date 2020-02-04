@@ -1,5 +1,5 @@
 import { IArgumentDefinition } from './arguments/i_argument_definition'
-import { IArgument } from '../arguments/iArgument'
+import { IArgument } from '../arguments/i-argument'
 
 /**
  * マップ構文定義

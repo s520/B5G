@@ -1,4 +1,4 @@
-import { IArgument } from '../../arguments/iArgument'
+import { IArgument } from '../../arguments/i-argument'
 import { ArgumentType } from '../../argumentTypes/argumentType'
 
 /**
