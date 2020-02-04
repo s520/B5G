@@ -1,4 +1,4 @@
-import { listArgument } from '../../argumentTypes/listArgument'
+import { listArgument } from '../../argument-types/list-argument'
 
 describe('List', () => {
 

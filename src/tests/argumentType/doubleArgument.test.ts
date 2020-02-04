@@ -1,4 +1,4 @@
-import { doubleArgument } from '../../argumentTypes/doubleArgument'
+import { doubleArgument } from '../../argument-types/double-argument'
 import { createEmptyArgument } from '../helper/empty_argument'
 import { assertSetIArgumentTestValue } from '../helper/assert_set_iargument_testvalue'
 

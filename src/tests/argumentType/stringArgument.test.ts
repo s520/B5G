@@ -1,4 +1,4 @@
-import { stringArgument } from '../../argumentTypes/stringArgument'
+import { stringArgument } from '../../argument-types/string-argument'
 import { assertSetIArgumentTestValue } from '../helper/assert_set_iargument_testvalue'
 import { createEmptyArgument } from '../helper/empty_argument'
 

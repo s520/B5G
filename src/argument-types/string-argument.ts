@@ -1,4 +1,4 @@
-import { ArgumentType } from './argumentType'
+import { ArgumentType } from './argument-type'
 
 export class StringArgument extends ArgumentType {
 
