@@ -1,6 +1,6 @@
 import { stringArgument } from '../../argument-types/string-argument'
-import { assertSetIArgumentTestValue } from '../helper/assert_set_iargument_testvalue'
-import { createEmptyArgument } from '../helper/empty_argument'
+import { assertSetIArgumentTestValue } from '../helper/assert-set-iargument-testvalue'
+import { createEmptyArgument } from '../helper/empty-argument'
 
 describe('String', () => {
 
