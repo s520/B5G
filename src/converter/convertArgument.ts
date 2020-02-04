@@ -1,7 +1,6 @@
-import { IArgumentDefinition } from '../definition/iArgumentDefinition'
-import { IArgument } from '../definition/iArgument'
+import { IArgumentDefinition } from '../definition/arguments/i_argument_definition'
+import { IArgument } from '../arguments/iArgument'
 import { allTypes } from '../argumentTypes/allTypes'
-import { listArgument } from '../argumentTypes/listArgument'
 
 /**
  * IArgumentDefinitionに情報を付与したIArguementを生成して返します。
@@ -10,7 +9,7 @@ import { listArgument } from '../argumentTypes/listArgument'
 export const convertArguments = (
     argDefs: IArgumentDefinition[]
 ): IArgument[] => {
-    const args = argDefs.map(argDef => convertArgument(argDef))
+    const args = argDefs.map(argDef => allTypes.find(t => t.isType(argDef.type))!.convertDefinitionToArgument(argDef))
 
     if (args.length < 1) {
         return args
@@ -18,22 +17,4 @@ export const convertArguments = (
 
     args.slice(-1)[0].last = true
     return args
-}
-
-/**
- * IArgumentDefinitionに情報を付与したIArguementを生成して返します。
- * @param argDef 引数定義（IArgumentDefinition）
- */
-const convertArgument = (argDef: IArgumentDefinition): IArgument => {
-    const argument: IArgument = <any>argDef
-    argument.last = false
-
-    // テスト値の設定
-    const targetType = allTypes.find(type => type.isType(argument.type))!
-    targetType.setTestValue(argument)
-
-    // list型か？
-    argument.isList = listArgument.isType(argument.type)
-
-    return argument
 }

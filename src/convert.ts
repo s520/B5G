@@ -1,6 +1,6 @@
 import { IMapDefinition } from './definition/iMapDefinition'
 import { convertMapStatement } from './converter/convertMapStatement'
-import { IMapData } from './definition/iMapData'
+import { IMapData } from './mapdata/iMapData'
 import { createMapData } from './converter/createMapData'
 
 /**

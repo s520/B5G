@@ -1,9 +1,29 @@
-import { IArgumentDefinition } from './iArgumentDefinition'
+import { IArgumentDefinition } from '../definition/arguments/i_argument_definition'
 
 /**
  * 引数定義
  */
-export interface IArgument extends IArgumentDefinition {
+export interface IArgument {
+    /**
+     * 引数名
+     */
+    name: string
+
+    /**
+     * 引数の型
+     */
+    type: string
+
+    /**
+     * 引数の説明
+     */
+    desc: string
+
+    /**
+     * 省略可能な引数か？
+     */
+    opt: boolean
+
     /**
      * 最後の引数か？
      * 最後の引数以外はカンマを付ける関係で使う
@@ -24,17 +44,4 @@ export interface IArgument extends IArgumentDefinition {
      * C#用テスト値
      */
     test_value_csharp: string
-
-    //#region list用
-
-    /**
-     * 引数の型がlistか？
-     */
-    isList: boolean
-
-    /**
-     * Typeがlistのときに使用する可変長引数
-     */
-    inner_arguments: IArgument[] | null
-    //#endregion
 }

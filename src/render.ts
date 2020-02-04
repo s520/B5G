@@ -1,6 +1,6 @@
 import mustache from 'mustache'
 import stripBom from 'strip-bom'
-import { IMapData } from './definition/iMapData'
+import { IMapData } from './mapdata/iMapData'
 
 /**
  * ステートメントをテンプレートに書き出します。

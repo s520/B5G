@@ -1,6 +1,6 @@
 import { IMapDefinition } from '../../definition/iMapDefinition'
-import { IArgument } from '../../definition/iArgument'
-import { IArgumentDefinition } from '../../definition/iArgumentDefinition';
+import { IArgument } from '../../arguments/iArgument'
+import { IArgumentDefinition } from '../../definition/arguments/i_argument_definition';
 import { convertMapStatement } from '../../converter/convertMapStatement'
 
 // syntaxType等のUnitTestはiMapDefinition.test.tsで行う
@@ -13,9 +13,7 @@ describe('convertMapStatement()', () => {
             name: 'Argument',
             type: 'string',
             desc: 'test argument',
-            opt: false,
-            counter_first: undefined,
-            inner_type: undefined
+            opt: false
         }
         mapDefinition = {
             elem: 'Element',
