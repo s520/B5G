@@ -1,6 +1,6 @@
 import linq from 'linq'
 
-import { IMapStatement } from '../statements/iMapStatement'
+import { IMapStatement } from '../statements/i-map-statement'
 import { IMapData } from '../map-data/i-map-data'
 
 /**
