@@ -32,8 +32,5 @@ const convertArgument = (argDef: IArgumentDefinition): IArgument => {
     const targetType = allTypes.find(type => type.isType(argument.type))!
     targetType.setTestValue(argument)
 
-    // list型か？
-    argument.isList = listArgument.isType(argument.type)
-
     return argument
 }

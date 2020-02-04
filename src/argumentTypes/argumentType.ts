@@ -58,9 +58,7 @@ export abstract class ArgumentType {
             last: false,
             test_value_map_grammar: this.bve5TestValue,
             test_value_map_grammar_non_quote: this.rowTestValue,
-            test_value_csharp: this.csharpTestValue,
-            isList: false,
-            inner_arguments: null
+            test_value_csharp: this.csharpTestValue
         }
 
         return argument
