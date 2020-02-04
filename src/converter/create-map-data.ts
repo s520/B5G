@@ -1,7 +1,7 @@
 import linq from 'linq'
 
 import { IMapStatement } from '../statements/iMapStatement'
-import { IMapData } from '../mapdata/iMapData'
+import { IMapData } from '../map-data/i-map-data'
 
 /**
  * マップステートメントからIMapDataを生成して返します。

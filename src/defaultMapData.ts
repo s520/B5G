@@ -2,7 +2,7 @@ import * as fse from 'fs-extra'
 import path from 'path'
 import * as yaml from 'js-yaml'
 
-import { IMapData } from './mapdata/iMapData';
+import { IMapData } from './map-data/i-map-data';
 import { IMapDefinition } from './definition/i-map-definition';
 import { convert } from './convert';
 
