@@ -5,7 +5,7 @@ import { IMapStatement } from '../statements/iMapStatement'
 import { convertArguments } from './convertArgument'
 import { IArgumentPattern } from '../arguments/i-argument-pattern'
 import { IArgument } from '../arguments/i-argument'
-import { isMapVersion1, isMapVersion2 } from '../common/mapVersionDetector'
+import { isMapVersion1, isMapVersion2 } from '../headers/map-version-detector'
 
 /**
  * マップ構文定義から必要な情報を付加したIMapStatementを返します。
