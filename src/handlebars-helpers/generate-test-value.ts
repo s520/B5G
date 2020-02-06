@@ -3,6 +3,18 @@ import { getType } from '../argument-types/all-types'
 import { ArgumentType } from '../argument-types/argument-type'
 
 /**
+ * テスト値を引数の型名を元に生成します。
+ * @param typeName 引数の型名
+ */
+export const generateRowTestValue = (typeName: string): string => getPrimitiveType(typeName).rowTestValue
+
+/**
+ * BVE5用テスト値を引数の型名を元に生成します
+ * @param typeName 引数の型名
+ */
+export const generateBve5TestValue = (typeName: string): string => getPrimitiveType(typeName).bve5TestValue
+
+/**
  * C#用テスト値を引数の型名を元に生成します。
  * @param typeName 引数の型名
  */
