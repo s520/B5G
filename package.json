@@ -47,7 +47,7 @@
     "js-yaml": "3.13.1",
     "ts-jest": "25.3.0",
     "ts-node": "8.8.1",
-    "tslint": "6.1.1",
+    "tslint": "6.1.2",
     "tslint-config-airbnb": "5.11.2",
     "tsutils": "3.17.1"
   }
