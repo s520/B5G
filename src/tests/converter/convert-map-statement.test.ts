@@ -3,8 +3,6 @@ import { Argument } from '../../arguments/argument'
 import { ArgumentDefinition } from '../../definition/arguments/argument-definition'
 import { convertMapStatement } from '../../converter/convert-map-statement'
 
-/* eslint-disable @typescript-eslint/camelcase */
-
 // syntaxType等のUnitTestはiMapDefinition.test.tsで行う
 describe('convertMapStatement()', () => {
     let argDefinition: ArgumentDefinition

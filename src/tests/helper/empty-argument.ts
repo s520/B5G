@@ -1,7 +1,5 @@
 import { Argument } from '../../arguments/argument'
 
-/* eslint-disable @typescript-eslint/camelcase */
-
 /**
  * 空の引数を生成して返します。
  */

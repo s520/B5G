@@ -1,8 +1,6 @@
 import { createMapData } from '../../converter/create-map-data'
 import { MapStatement } from '../../statements/map-statement'
 
-/* eslint-disable @typescript-eslint/camelcase */
-
 describe('createMapData()', () => {
     let statement: MapStatement
 
