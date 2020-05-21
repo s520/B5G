@@ -1,9 +1,11 @@
-import { IArgument } from '../../arguments/i-argument'
+import { Argument } from '../../arguments/argument'
+
+/* eslint-disable @typescript-eslint/camelcase */
 
 /**
  * 空の引数を生成して返します。
  */
-export const createEmptyArgument = (): IArgument => {
+export const createEmptyArgument = (): Argument => {
     return {
         name: '',
         type: '',
@@ -14,6 +16,6 @@ export const createEmptyArgument = (): IArgument => {
         test_value_map_grammar_non_quote: '',
         test_value_csharp: '',
         isList: false,
-        inner_arguments: null
-    } as IArgument
+        inner_arguments: null,
+    } as Argument
 }

@@ -1,8 +1,10 @@
 import { createMapData } from '../../converter/create-map-data'
-import { IMapStatement } from '../../statements/i-map-statement';
+import { MapStatement } from '../../statements/map-statement'
+
+/* eslint-disable @typescript-eslint/camelcase */
 
 describe('createMapData()', () => {
-    let statement: IMapStatement
+    let statement: MapStatement
 
     beforeEach(() => {
         statement = {
@@ -22,7 +24,7 @@ describe('createMapData()', () => {
             syntax2: false,
             syntax3: true,
             nofunc: false,
-            noarg: false
+            noarg: false,
         }
     })
 
@@ -42,7 +44,7 @@ describe('createMapData()', () => {
         const states = [
             Object.assign({}, statement),
             Object.assign({}, statement),
-            Object.assign({}, statement)
+            Object.assign({}, statement),
         ]
         states[0].elem = 'Element1'
         states[1].elem = 'Element2'
@@ -59,16 +61,28 @@ describe('createMapData()', () => {
         expect(mapData.states[0]).toMatchObject(states[0])
         expect(mapData.states[1]).toMatchObject(states[1])
         expect(mapData.states[2]).toMatchObject(states[2])
-        expect(mapData.elems).toMatchObject(['Element1', 'Element2', 'Element3'])
-        expect(mapData.subElems).toMatchObject(['SubElement1', 'SubElement2', 'SubElement3'])
-        expect(mapData.funcs).toMatchObject(['Function1', 'Function2', 'Function3'])
+        expect(mapData.elems).toMatchObject([
+            'Element1',
+            'Element2',
+            'Element3',
+        ])
+        expect(mapData.subElems).toMatchObject([
+            'SubElement1',
+            'SubElement2',
+            'SubElement3',
+        ])
+        expect(mapData.funcs).toMatchObject([
+            'Function1',
+            'Function2',
+            'Function3',
+        ])
     })
 
     it('multi statement same identifier', () => {
         const states = [
             Object.assign({}, statement),
             Object.assign({}, statement),
-            Object.assign({}, statement)
+            Object.assign({}, statement),
         ]
 
         const mapData = createMapData(states)

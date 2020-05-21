@@ -1,7 +1,6 @@
 import { ArgumentType } from './argument-type'
 
 export class StringArgument extends ArgumentType {
-
     public get type(): string {
         return 'String'
     }

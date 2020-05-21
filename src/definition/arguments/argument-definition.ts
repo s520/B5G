@@ -1,7 +1,7 @@
 /**
  * mapgrammar.yamlの引数定義スキーマ
  */
-export interface IArgumentDefinition {
+export interface ArgumentDefinition {
     /**
      * 引数名
      */

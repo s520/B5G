@@ -3,7 +3,6 @@ import { createEmptyArgument } from '../helper/empty-argument'
 import { assertSetIArgumentTestValue } from '../helper/assert-set-iargument-testvalue'
 
 describe('Double', () => {
-
     describe('isType()', () => {
         it('same type lower case', () => {
             expect(doubleArgument.isType('double')).toBeTruthy()
@@ -38,13 +37,18 @@ describe('Double', () => {
     describe('csharpTestValue', () => {
         it('double csharp value', () => {
             const numberRegex = /^[+,-]?([1-9]\d*|0)(\.\d+)?$/
-            expect(numberRegex.test(doubleArgument.csharpTestValue)).toBeTruthy()
+            expect(
+                numberRegex.test(doubleArgument.csharpTestValue)
+            ).toBeTruthy()
         })
     })
 
     describe('setTestValue', () => {
         it('check set values', () => {
-            assertSetIArgumentTestValue(doubleArgument.setTestValue(createEmptyArgument()), doubleArgument)
+            assertSetIArgumentTestValue(
+                doubleArgument.setTestValue(createEmptyArgument()),
+                doubleArgument
+            )
         })
     })
 })

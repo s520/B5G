@@ -1,13 +1,13 @@
-import { IMapStatement } from '../statements/i-map-statement'
+import { MapStatement } from '../statements/map-statement'
 
 /**
  * テンプレートエンジンに食わせるマップデータ
  */
-export interface IMapData {
+export interface MapData {
     /**
      * 構文の定義
      */
-    states: IMapStatement[]
+    states: MapStatement[]
 
     /**
      * 全構文のマップ要素名

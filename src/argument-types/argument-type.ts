@@ -1,5 +1,5 @@
-import { IArgument } from '../arguments/i-argument'
-import { IArgumentDefinition } from '../definition/arguments/i-argument-definition'
+import { Argument } from '../arguments/argument'
+import { ArgumentDefinition } from '../definition/arguments/argument-definition'
 
 /**
  * 引数の型定義
@@ -31,14 +31,17 @@ export abstract class ArgumentType {
      * @param type 型名
      */
     public isType(type: string): boolean {
-        return type.trim().replace('?', '').toLowerCase() === this.type.toLowerCase()
+        return (
+            type.trim().replace('?', '').toLowerCase() ===
+            this.type.toLowerCase()
+        )
     }
 
     /**
      * 引数にテスト値をセットして返します。
      * @param arg iArgument
      */
-    public setTestValue(arg: IArgument): IArgument {
+    public setTestValue(arg: Argument): Argument {
         arg.test_value_map_grammar = this.bve5TestValue
         arg.test_value_map_grammar_non_quote = this.rowTestValue
         arg.test_value_csharp = this.csharpTestValue
@@ -49,8 +52,8 @@ export abstract class ArgumentType {
      * iArgumentDefinitionをiArgumentに変換します。
      * @param argDef iArgumentDefinition
      */
-    public convertDefinitionToArgument(argDef: IArgumentDefinition): IArgument {
-        const argument: IArgument = {
+    public convertDefinitionToArgument(argDef: ArgumentDefinition): Argument {
+        const argument: Argument = {
             name: argDef.name,
             type: argDef.type,
             desc: argDef.desc,
@@ -58,7 +61,7 @@ export abstract class ArgumentType {
             last: false,
             test_value_map_grammar: this.bve5TestValue,
             test_value_map_grammar_non_quote: this.rowTestValue,
-            test_value_csharp: this.csharpTestValue
+            test_value_csharp: this.csharpTestValue,
         }
 
         return argument

@@ -1,7 +1,6 @@
 import { listArgument } from '../../argument-types/list-argument'
 
 describe('List', () => {
-
     describe('isType()', () => {
         it('same type lower case', () => {
             expect(listArgument.isType('list')).toBeTruthy()

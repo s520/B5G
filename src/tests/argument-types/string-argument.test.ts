@@ -3,7 +3,6 @@ import { assertSetIArgumentTestValue } from '../helper/assert-set-iargument-test
 import { createEmptyArgument } from '../helper/empty-argument'
 
 describe('String', () => {
-
     describe('isType()', () => {
         it('same type lower case', () => {
             expect(stringArgument.isType('string')).toBeTruthy()
@@ -30,19 +29,26 @@ describe('String', () => {
 
     describe('bve5TestValue', () => {
         it('string value', () => {
-            expect(stringArgument.bve5TestValue).toBe(`'${stringArgument.rowTestValue}'`)
+            expect(stringArgument.bve5TestValue).toBe(
+                `'${stringArgument.rowTestValue}'`
+            )
         })
     })
 
     describe('csharpTestValue', () => {
         it('string charp value', () => {
-            expect(stringArgument.csharpTestValue).toBe(`"${stringArgument.rowTestValue}"`)
+            expect(stringArgument.csharpTestValue).toBe(
+                `"${stringArgument.rowTestValue}"`
+            )
         })
     })
 
     describe('setTestValue', () => {
         it('check set values', () => {
-            assertSetIArgumentTestValue(stringArgument.setTestValue(createEmptyArgument()), stringArgument)
+            assertSetIArgumentTestValue(
+                stringArgument.setTestValue(createEmptyArgument()),
+                stringArgument
+            )
         })
     })
 })

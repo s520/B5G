@@ -1,11 +1,11 @@
-import { IArgumentDefinition } from './arguments/i-argument-definition'
-import { IArgument } from '../arguments/i-argument'
+import { ArgumentDefinition } from './arguments/argument-definition'
+import { Argument } from '../arguments/argument'
 
 /**
  * マップ構文定義
  * mapgrammar.yamlのスキーマ
  */
-export interface IMapDefinition {
+export interface MapDefinition {
     /**
      * マップ要素名
      */
@@ -36,7 +36,7 @@ export interface IMapDefinition {
      * IMapStatementがこのインタフェースを継承している関係で、同名で型の異なる変数(つまりargs)が定義できない。
      * そのため暫定措置として、argsはIArgumentDefinition(yaml読み込み時)とIArgumentの両方を許可している。
      */
-    args: IArgumentDefinition[] | IArgument[]
+    args: ArgumentDefinition[] | Argument[]
 
     /**
      * 関数が取りうる引数のリスト
@@ -56,49 +56,49 @@ export interface IMapDefinition {
  * 引数に指定されたマップ構文がキーを保持しているか
  * @param mapDefinition マップ構文定義
  */
-export const hasKey = (mapDefinition: IMapDefinition): boolean =>
+export const hasKey = (mapDefinition: MapDefinition): boolean =>
     mapDefinition.key !== undefined
 
 /**
  * 引数に指定されたマップ構文がマップ副要素を保持しているか
  * @param mapDefinition マップ構文定義
  */
-export const hasSubElem = (mapDefinition: IMapDefinition): boolean =>
+export const hasSubElem = (mapDefinition: MapDefinition): boolean =>
     mapDefinition.sub_elem !== undefined
 
 /**
  * 引数に指定されたマップ構文定義が関数名を保持しているか
  * @param mapDefinition マップ構文定義
  */
-export const hasFunc = (mapDefinition: IMapDefinition): boolean =>
+export const hasFunc = (mapDefinition: MapDefinition): boolean =>
     mapDefinition.func !== undefined && mapDefinition.func.trim() !== ''
 
 /**
  * 引数に指定されたマップ構文定義が引数を保持しているか
  * @param mapDefinition マップ構文定義
  */
-export const hasArg = (mapDefinition: IMapDefinition): boolean =>
+export const hasArg = (mapDefinition: MapDefinition): boolean =>
     mapDefinition.args.length > 0
 
 /**
  * 引数に指定されたマップ構文定義がSyntax1かどうか
  * @param mapDefinition マップ構文定義
  */
-export const isSyntax1 = (mapDefinition: IMapDefinition): boolean =>
+export const isSyntax1 = (mapDefinition: MapDefinition): boolean =>
     !hasKey(mapDefinition)
 
 /**
  * 引数に指定されたマップ構文定義がSyntax2かどうか
  * @param mapDefinition マップ構文定義
  */
-export const isSyntax2 = (mapDefinition: IMapDefinition): boolean =>
+export const isSyntax2 = (mapDefinition: MapDefinition): boolean =>
     !isSyntax1(mapDefinition) && !hasSubElem(mapDefinition)
 
 /**
  * 引数に指定されたマップ構文定義がSyntax3かどうか
  * @param mapDefinition マップ構文定義
  */
-export const isSyntax3 = (mapDefinition: IMapDefinition): boolean =>
+export const isSyntax3 = (mapDefinition: MapDefinition): boolean =>
     !isSyntax1(mapDefinition) && !isSyntax2(mapDefinition)
 
 // #endregion

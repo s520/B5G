@@ -6,5 +6,5 @@ import { listArgument } from './list-argument'
 export const allTypes: ArgumentType[] = [
     doubleArgument,
     stringArgument,
-    listArgument
+    listArgument,
 ]

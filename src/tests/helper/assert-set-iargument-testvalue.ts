@@ -1,4 +1,4 @@
-import { IArgument } from '../../arguments/i-argument'
+import { Argument } from '../../arguments/argument'
 import { ArgumentType } from '../../argument-types/argument-type'
 
 /**
@@ -6,7 +6,10 @@ import { ArgumentType } from '../../argument-types/argument-type'
  * @param argument テスト用値をチェックする対象の引数
  * @param type テスト用値の型
  */
-export const assertSetIArgumentTestValue = (argument: IArgument, type: ArgumentType): void => {
+export const assertSetIArgumentTestValue = (
+    argument: Argument,
+    type: ArgumentType
+): void => {
     expect(argument.test_value_map_grammar).toBe(type.bve5TestValue)
     expect(argument.test_value_map_grammar_non_quote).toBe(type.rowTestValue)
     expect(argument.test_value_csharp).toBe(type.csharpTestValue)

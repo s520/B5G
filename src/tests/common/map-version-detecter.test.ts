@@ -1,4 +1,7 @@
-import { isMapVersion1, isMapVersion2 } from '../../headers/map-version-detector'
+import {
+    isMapVersion1,
+    isMapVersion2,
+} from '../../headers/map-version-detector'
 
 describe('isMapVersion1', () => {
     it('is version 1', () => {

@@ -1,18 +1,21 @@
 import { convertArguments } from '../../converter/convert-argument'
-import { IArgumentDefinition } from '../../definition/arguments/i-argument-definition'
+import { ArgumentDefinition } from '../../definition/arguments/argument-definition'
 import { doubleArgument } from '../../argument-types/double-argument'
 import { stringArgument } from '../../argument-types/string-argument'
 import { assertSetIArgumentTestValue } from '../helper/assert-set-iargument-testvalue'
 
 describe('convertArguments', () => {
-    let argDefinition: IArgumentDefinition
+    let argDefinition: ArgumentDefinition
 
-    beforeEach(() => argDefinition = {
-        name: 'test',
-        type: 'string',
-        desc: 'test argument',
-        opt: false
-    })
+    beforeEach(
+        () =>
+            (argDefinition = {
+                name: 'test',
+                type: 'string',
+                desc: 'test argument',
+                opt: false,
+            })
+    )
 
     it('no argument', () => {
         const arg = convertArguments([])
@@ -31,7 +34,7 @@ describe('convertArguments', () => {
         const argDefs = [
             Object.assign({}, argDefinition),
             Object.assign({}, argDefinition),
-            Object.assign({}, argDefinition)
+            Object.assign({}, argDefinition),
         ]
         argDefs[0].name = 'test1'
         argDefs[1].name = 'test2'
