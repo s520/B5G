@@ -1,31 +1,29 @@
-import { IMapDefinition } from '../../definition/i-map-definition'
-import { IArgument } from '../../arguments/i-argument'
-import { IArgumentDefinition } from '../../definition/arguments/i-argument-definition';
+import { MapDefinition } from '../../definition/map-definition'
+import { Argument } from '../../arguments/argument'
+import { ArgumentDefinition } from '../../definition/arguments/argument-definition'
 import { convertMapStatement } from '../../converter/convert-map-statement'
 
 // syntaxType等のUnitTestはiMapDefinition.test.tsで行う
 describe('convertMapStatement()', () => {
-    let argDefinition: IArgumentDefinition
-    let mapDefinition: IMapDefinition
+    let argDefinition: ArgumentDefinition
+    let mapDefinition: MapDefinition
 
     beforeEach(() => {
         argDefinition = {
             name: 'Argument',
             type: 'string',
             desc: 'test argument',
-            opt: false
+            opt: false,
         }
         mapDefinition = {
             elem: 'Element',
             key: 'Key',
             sub_elem: 'SubElement',
             func: 'Function',
-            versions: [
-                '2.02'
-            ],
+            versions: ['2.02'],
             args: [argDefinition],
             argPatterns: ['Argument'],
-            skip_test: false
+            skip_test: false,
         }
     })
 
@@ -39,7 +37,6 @@ describe('convertMapStatement()', () => {
     })
 
     describe('detect syntax type', () => {
-
         it('detect syntax type with argument and func', () => {
             const state = convertMapStatement(mapDefinition)
             expect(state.nofunc).toBeFalsy()
@@ -57,7 +54,6 @@ describe('convertMapStatement()', () => {
     })
 
     describe('create lower identifier', () => {
-
         it('create lower identifier', () => {
             const state = convertMapStatement(mapDefinition)
             expect(state.elem_lower).toBe('element')
@@ -77,18 +73,16 @@ describe('convertMapStatement()', () => {
 
     // 引数変換のUnitTestはconvertArgument.test.tsで行う
     describe('conver argument', () => {
-
         it('convert', () => {
             const state = convertMapStatement(mapDefinition)
             expect(state.args.length).toBe(mapDefinition.args.length)
             expect(state.args[0]).toMatchObject(argDefinition)
-            const arg = state.args as IArgument[]
+            const arg = state.args as Argument[]
             expect(arg[0].last).toBeTruthy()
         })
     })
 
     describe('create argument pattern', () => {
-
         it('no versions', () => {
             mapDefinition.versions = []
             const state = convertMapStatement(mapDefinition)
@@ -133,7 +127,7 @@ describe('convertMapStatement()', () => {
             expect(state.argPattern.length).toBe(1)
             expect(state.argPattern[0].args.length).toBe(1)
             expect(state.argPattern[0].args[0].name).toBe('Argument')
-            expect((state.args[0] as IArgument).last).toBeTruthy()
+            expect((state.args[0] as Argument).last).toBeTruthy()
             expect(state.argPattern[0].args[0].last).toBeTruthy()
             expect(state.argPattern[0].version).toBe('2.02')
         })
@@ -143,7 +137,7 @@ describe('convertMapStatement()', () => {
             mapDefinition.versions = ['1.00', '2.02']
             const state = convertMapStatement(mapDefinition)
             expect(state.argPattern.length).toBe(2)
-            expect((state.args[0] as IArgument).last).toBeTruthy()
+            expect((state.args[0] as Argument).last).toBeTruthy()
 
             // First pattern
             expect(state.argPattern[0].args.length).toBe(1)
@@ -163,9 +157,9 @@ describe('convertMapStatement()', () => {
         })
 
         it('multi argPatterns single versions', () => {
-            const argDefs: IArgumentDefinition[] = [
+            const argDefs: ArgumentDefinition[] = [
                 Object.assign({}, argDefinition),
-                Object.assign({}, argDefinition)
+                Object.assign({}, argDefinition),
             ]
             argDefs[0].name = 'arg1'
             argDefs[1].name = 'arg2'
@@ -176,8 +170,8 @@ describe('convertMapStatement()', () => {
 
             const state = convertMapStatement(mapDefinition)
             expect(state.argPattern.length).toBe(3)
-            expect((state.args[0] as IArgument).last).toBeFalsy()
-            expect((state.args[1] as IArgument).last).toBeTruthy()
+            expect((state.args[0] as Argument).last).toBeFalsy()
+            expect((state.args[1] as Argument).last).toBeTruthy()
 
             // First pattern ()
             expect(state.argPattern[0].args.length).toBe(0)
@@ -205,9 +199,9 @@ describe('convertMapStatement()', () => {
         })
 
         it('multi argPatterns single versions with different order', () => {
-            const argDefs: IArgumentDefinition[] = [
+            const argDefs: ArgumentDefinition[] = [
                 Object.assign({}, argDefinition),
-                Object.assign({}, argDefinition)
+                Object.assign({}, argDefinition),
             ]
             argDefs[0].name = 'arg1'
             argDefs[1].name = 'arg2'
@@ -218,8 +212,8 @@ describe('convertMapStatement()', () => {
 
             const state = convertMapStatement(mapDefinition)
             expect(state.argPattern.length).toBe(3)
-            expect((state.args[0] as IArgument).last).toBeFalsy()
-            expect((state.args[1] as IArgument).last).toBeTruthy()
+            expect((state.args[0] as Argument).last).toBeFalsy()
+            expect((state.args[1] as Argument).last).toBeTruthy()
 
             // First pattern ()
             expect(state.argPattern[0].args.length).toBe(0)
@@ -247,9 +241,9 @@ describe('convertMapStatement()', () => {
         })
 
         it('multi argPatterns multi versions', () => {
-            const argDefs: IArgumentDefinition[] = [
+            const argDefs: ArgumentDefinition[] = [
                 Object.assign({}, argDefinition),
-                Object.assign({}, argDefinition)
+                Object.assign({}, argDefinition),
             ]
             argDefs[0].name = 'arg1'
             argDefs[1].name = 'arg2'
@@ -260,8 +254,8 @@ describe('convertMapStatement()', () => {
 
             const state = convertMapStatement(mapDefinition)
             expect(state.argPattern.length).toBe(4)
-            expect((state.args[0] as IArgument).last).toBeFalsy()
-            expect((state.args[1] as IArgument).last).toBeTruthy()
+            expect((state.args[0] as Argument).last).toBeFalsy()
+            expect((state.args[1] as Argument).last).toBeTruthy()
 
             // First pattern 1.00(arg1)
             const p1 = state.argPattern[0]

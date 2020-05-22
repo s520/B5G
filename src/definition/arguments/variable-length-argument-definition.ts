@@ -1,6 +1,6 @@
-import { IArgumentDefinition } from './i-argument-definition'
+import { ArgumentDefinition } from './argument-definition'
 
-export interface IVariableLengthArgumentDefinition extends IArgumentDefinition {
+export interface VariableLengthArgumentDefinition extends ArgumentDefinition {
     /**
      * 可変長引数の末尾に付ける番号(採番)の最初の数
      */

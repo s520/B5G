@@ -1,11 +1,11 @@
 import * as Enumerable from 'linq'
 
 import { ArgumentType } from './argument-type'
-import { IArgument } from '../arguments/i-argument'
-import { IArgumentDefinition } from '../definition/arguments/i-argument-definition'
+import { Argument } from '../arguments/argument'
+import { ArgumentDefinition } from '../definition/arguments/argument-definition'
 import { allTypes } from './all-types'
-import { IVariableLengthArgumentDefinition } from '../definition/arguments/i-variable-length-argument-definition'
-import { IListArgument } from '../arguments/i-list-argument'
+import { VariableLengthArgumentDefinition } from '../definition/arguments/variable-length-argument-definition'
+import { ListArgument } from '../arguments/list-argument'
 
 /**
  * 可変長引数をテスト用に生成する数
@@ -13,7 +13,7 @@ import { IListArgument } from '../arguments/i-list-argument'
  */
 export const generateArgumentCount = 5
 
-export class ListArgument extends ArgumentType {
+export class ListArgumentType extends ArgumentType {
     public get type(): string {
         return 'List'
     }
@@ -32,12 +32,12 @@ export class ListArgument extends ArgumentType {
         return this.rowTestValue
     }
 
-    public convertDefinitionToArgument(argDef: IArgumentDefinition): IArgument {
+    public convertDefinitionToArgument(argDef: ArgumentDefinition): Argument {
         // TODO: 本当にargDefがIVariableLengthArgumentDefinitionを実装しているか確認が必要
-        const vArgDef = argDef as IVariableLengthArgumentDefinition
+        const vArgDef = argDef as VariableLengthArgumentDefinition
 
         // FIX ME: 一旦super.convertDefinitionToArgumentでIArgumentを取得して、それをIListArgumentに変換できたほうがきれいなのでそうしたい
-        const argument: IListArgument = {
+        const argument: ListArgument = {
             name: vArgDef.name,
             type: vArgDef.type,
             desc: vArgDef.desc,
@@ -50,10 +50,10 @@ export class ListArgument extends ArgumentType {
             inner_arguments: this.generateRangeArgs(
                 vArgDef.name,
                 vArgDef.desc,
-                allTypes.find(t => t.isType(vArgDef.inner_type))!,
+                allTypes.find((t) => t.isType(vArgDef.inner_type))!,
                 vArgDef.counter_first,
                 generateArgumentCount
-            )
+            ),
         }
 
         return argument
@@ -73,23 +73,25 @@ export class ListArgument extends ArgumentType {
         type: ArgumentType,
         start: number,
         count: number
-    ): IArgument[] {
-        const args = Enumerable.range(start, count).select(
-            _ =>
-                ({
-                    name: name,
-                    type: type.type,
-                    desc: description,
-                    opt: true,
-                    counter_first: undefined,
-                    last: false,
-                    test_value_map_grammar: type.bve5TestValue,
-                    test_value_map_grammar_non_quote: type.rowTestValue,
-                    test_value_csharp: type.csharpTestValue,
-                    isList: this.isType(type.type),
-                    inner_arguments: null
-                } as IArgument)
-        ).toArray()
+    ): Argument[] {
+        const args = Enumerable.range(start, count)
+            .select(
+                (_) =>
+                    ({
+                        name: name,
+                        type: type.type,
+                        desc: description,
+                        opt: true,
+                        counter_first: undefined,
+                        last: false,
+                        test_value_map_grammar: type.bve5TestValue,
+                        test_value_map_grammar_non_quote: type.rowTestValue,
+                        test_value_csharp: type.csharpTestValue,
+                        isList: this.isType(type.type),
+                        inner_arguments: null,
+                    } as Argument)
+            )
+            .toArray()
 
         args[0].opt = false
         args.slice(-1)[0].last = true
@@ -98,4 +100,4 @@ export class ListArgument extends ArgumentType {
     }
 }
 
-export const listArgument = new ListArgument()
+export const listArgumentType = new ListArgumentType()

@@ -1,29 +1,29 @@
 import linq from 'linq'
 
-import { IMapStatement } from '../statements/i-map-statement'
-import { IMapData } from '../map-data/i-map-data'
+import { MapStatement } from '../statements/map-statement'
+import { MapData } from '../map-data/map-data'
 
 /**
  * マップステートメントからIMapDataを生成して返します。
  * @param statements IMapStatements
  */
-export const createMapData = (statements: IMapStatement[]): IMapData => {
+export const createMapData = (statements: MapStatement[]): MapData => {
     const elementNames = linq
         .from(statements)
-        .select(state => state.elem)
+        .select((state) => state.elem)
         .distinct()
         .toArray()
     const subElementNames = linq
         .from(statements)
-        .where(state => state.sub_elem !== undefined)
-        .select(state => state.sub_elem)
+        .where((state) => state.sub_elem !== undefined)
+        .select((state) => state.sub_elem)
         .cast<string>()
         .distinct()
         .toArray()
     const functionNames = linq
         .from(statements)
-        .where(state => state.func !== undefined)
-        .select(state => state.func)
+        .where((state) => state.func !== undefined)
+        .select((state) => state.func)
         .cast<string>()
         .distinct()
         .toArray()
@@ -32,6 +32,6 @@ export const createMapData = (statements: IMapStatement[]): IMapData => {
         states: statements,
         elems: elementNames,
         subElems: subElementNames,
-        funcs: functionNames
+        funcs: functionNames,
     }
 }

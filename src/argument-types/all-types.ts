@@ -1,10 +1,10 @@
 import { ArgumentType } from './argument-type'
-import { doubleArgument } from './double-argument'
-import { stringArgument } from './string-argument'
-import { listArgument } from './list-argument'
+import { doubleArgumentType } from './double-argument-type'
+import { stringArgumentType } from './string-argument-type'
+import { listArgumentType } from './list-argument-type'
 
 export const allTypes: ArgumentType[] = [
-    doubleArgument,
-    stringArgument,
-    listArgument
+    doubleArgumentType,
+    stringArgumentType,
+    listArgumentType,
 ]

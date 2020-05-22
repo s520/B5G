@@ -1,7 +1,6 @@
 import { ArgumentType } from './argument-type'
 
-export class DoubleArgument extends ArgumentType {
-
+export class DoubleArgumentType extends ArgumentType {
     public get type(): string {
         return 'Double'
     }
@@ -19,4 +18,4 @@ export class DoubleArgument extends ArgumentType {
     }
 }
 
-export const doubleArgument = new DoubleArgument()
+export const doubleArgumentType = new DoubleArgumentType()

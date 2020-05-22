@@ -1,8 +1,7 @@
-
 /**
  * 引数定義
  */
-export interface IArgument {
+export interface Argument {
     /**
      * 引数名
      */
