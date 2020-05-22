@@ -13,7 +13,7 @@ import { ListArgument } from '../arguments/list-argument'
  */
 export const generateArgumentCount = 5
 
-export class ListArgument extends ArgumentType {
+export class ListArgumentType extends ArgumentType {
     public get type(): string {
         return 'List'
     }
@@ -100,4 +100,4 @@ export class ListArgument extends ArgumentType {
     }
 }
 
-export const listArgument = new ListArgument()
+export const listArgumentType = new ListArgumentType()

@@ -1,36 +1,38 @@
-import { doubleArgument } from '../../argument-types/double-argument'
+import { doubleArgumentType } from '../../argument-types/double-argument-type'
 import { createEmptyArgument } from '../helper/empty-argument'
 import { assertSetIArgumentTestValue } from '../helper/assert-set-iargument-testvalue'
 
 describe('Double', () => {
     describe('isType()', () => {
         it('same type lower case', () => {
-            expect(doubleArgument.isType('double')).toBeTruthy()
+            expect(doubleArgumentType.isType('double')).toBeTruthy()
         })
         it('same type upper case', () => {
-            expect(doubleArgument.isType('DOUBLE')).toBeTruthy()
+            expect(doubleArgumentType.isType('DOUBLE')).toBeTruthy()
         })
         it('same type pascal case', () => {
-            expect(doubleArgument.isType('Double')).toBeTruthy()
+            expect(doubleArgumentType.isType('Double')).toBeTruthy()
         })
         it('same type with space', () => {
-            expect(doubleArgument.isType(' double ')).toBeTruthy()
+            expect(doubleArgumentType.isType(' double ')).toBeTruthy()
         })
         it('same type optional', () => {
-            expect(doubleArgument.isType('double?')).toBeTruthy()
+            expect(doubleArgumentType.isType('double?')).toBeTruthy()
         })
         it('different type', () => {
-            expect(doubleArgument.isType('string')).toBeFalsy()
+            expect(doubleArgumentType.isType('string')).toBeFalsy()
         })
         it('different type but contains type', () => {
-            expect(doubleArgument.isType('doubleDouble')).toBeFalsy()
+            expect(doubleArgumentType.isType('doubleDouble')).toBeFalsy()
         })
     })
 
     describe('bve5TestValue', () => {
         it('double value', () => {
             const numberRegex = /^[+,-]?([1-9]\d*|0)(\.\d+)?$/
-            expect(numberRegex.test(doubleArgument.bve5TestValue)).toBeTruthy()
+            expect(
+                numberRegex.test(doubleArgumentType.bve5TestValue)
+            ).toBeTruthy()
         })
     })
 
@@ -38,7 +40,7 @@ describe('Double', () => {
         it('double csharp value', () => {
             const numberRegex = /^[+,-]?([1-9]\d*|0)(\.\d+)?$/
             expect(
-                numberRegex.test(doubleArgument.csharpTestValue)
+                numberRegex.test(doubleArgumentType.csharpTestValue)
             ).toBeTruthy()
         })
     })
@@ -46,8 +48,8 @@ describe('Double', () => {
     describe('setTestValue', () => {
         it('check set values', () => {
             assertSetIArgumentTestValue(
-                doubleArgument.setTestValue(createEmptyArgument()),
-                doubleArgument
+                doubleArgumentType.setTestValue(createEmptyArgument()),
+                doubleArgumentType
             )
         })
     })
