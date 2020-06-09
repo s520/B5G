@@ -6,5 +6,5 @@ export { MapDefinition } from './definition/map-definition'
 export { MapStatement } from './statements/map-statement'
 
 export { convert } from './convert'
-export { getDafaultMapData } from './default-map-data'
+export { getDefaultMapData } from './default-map-data'
 export { render } from './render'
