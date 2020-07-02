@@ -1,6 +1,6 @@
-import { ArgumentType } from './argument-type'
+import { SingleArgumentType } from './single-argument-type'
 
-export class DoubleArgumentType extends ArgumentType {
+export class DoubleArgumentType extends SingleArgumentType {
     public get type(): string {
         return 'Double'
     }

@@ -1,6 +1,6 @@
 import { doubleArgumentType } from '../../argument-types/double-argument-type'
-import { createEmptyArgument } from '../helper/empty-argument'
-import { assertSetIArgumentTestValue } from '../helper/assert-set-iargument-testvalue'
+import { createEmptySingleArgument } from '../helper/empty-argument'
+import { assertSetISingleArgumentTestValue } from '../helper/assert-set-iargument-testvalue'
 
 describe('Double', () => {
     describe('isType()', () => {
@@ -47,8 +47,8 @@ describe('Double', () => {
 
     describe('setTestValue', () => {
         it('check set values', () => {
-            assertSetIArgumentTestValue(
-                doubleArgumentType.setTestValue(createEmptyArgument()),
+            assertSetISingleArgumentTestValue(
+                doubleArgumentType.setTestValue(createEmptySingleArgument()),
                 doubleArgumentType
             )
         })

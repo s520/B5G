@@ -641,7 +641,6 @@
     - "Door,Margin1,Margin2"
 - elem: Section
   func: Begin
-  skip_test: true
   versions:
     - "2.02"
   args:
@@ -655,7 +654,6 @@
     - "Signal"
 - elem: Section
   func: Beginnew
-  skip_test: true
   deprecated: true
   inheritance: SectionBegin
   versions:
@@ -673,7 +671,6 @@
     - "Signal"
 - elem: Section
   func: Setspeedlimit
-  skip_test: true
   versions:
     - "2.02"
   args:
@@ -687,7 +684,6 @@
     - "V"
 - elem: Signal
   func: Speedlimit
-  skip_test: true
   deprecated: true
   inheritance: SectionSetspeedlimit
   versions:
@@ -705,7 +701,6 @@
     - "V"
 - elem: Speedlimit
   func: Setsignal
-  skip_test: true
   deprecated: true
   inheritance: SectionSetspeedlimit
   versions:
@@ -738,7 +733,6 @@
 - elem: Signal
   key: SignalAspectKey
   func: Put
-  skip_test: true
   versions:
     - "2.02"
     - "2.00"
@@ -911,7 +905,6 @@
     - "Pitch,Yaw"
 - elem: Fog
   func: Interpolate
-  skip_test: true
   versions:
     - "2.02"
   args:
@@ -937,7 +930,6 @@
     - "Density,Red,Green,Blue"
 - elem: Fog
   func: Set
-  skip_test: true
   deprecated: true
   inheritance: FogInterpolate
   versions:
@@ -1098,7 +1090,6 @@
 - elem: Sound3d
   key: SoundKey
   func: Put
-  skip_test: true
   versions:
     - "2.02"
     - "2.00"
@@ -1155,7 +1146,6 @@
     - "Index"
 - elem: Train
   func: Add
-  skip_test: true
   versions:
     - "2.02"
     - "2.00"
@@ -1178,11 +1168,11 @@
       desc: "進行方向 (-1: 対向, 1: 並走)"
       opt: true
   argPatterns:
+    - "TrainKey,FilePath"
     - "TrainKey,FilePath,TrackKey,Direction"
 - elem: Train
   key: TrainKey
   func: Load
-  skip_test: true
   versions:
     - "2.02"
   args:
@@ -1293,9 +1283,7 @@
       desc: "青成分 (0 ~ 1)"
       opt: false
   argPatterns:
-    - ""
-    - "FogStart,Fogend"
-    - "FogStart,Fogend,red,green,blue"
+    - "Fogstart,Fogend,red,green,blue"
 - elem: Legacy
   func: Curve
   deprecated: true
@@ -1311,7 +1299,7 @@
     - name: cant
       type: "double?"
       desc: "カント [m]"
-      opt: true
+      opt: false
   argPatterns:
     - "radius,cant"
 - elem: Legacy

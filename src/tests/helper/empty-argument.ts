@@ -1,9 +1,9 @@
-import { Argument } from '../../arguments/argument'
+import { SingleArgument } from '../../arguments/single-argument'
 
 /**
  * 空の引数を生成して返します。
  */
-export const createEmptyArgument = (): Argument => {
+export const createEmptySingleArgument = (): SingleArgument => {
     return {
         name: '',
         type: '',
@@ -13,7 +13,5 @@ export const createEmptyArgument = (): Argument => {
         test_value_map_grammar: '',
         test_value_map_grammar_non_quote: '',
         test_value_csharp: '',
-        isList: false,
-        inner_arguments: null,
-    } as Argument
+    } as SingleArgument
 }

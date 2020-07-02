@@ -3,9 +3,11 @@ import * as Enumerable from 'linq'
 import { ArgumentType } from './argument-type'
 import { Argument } from '../arguments/argument'
 import { ArgumentDefinition } from '../definition/arguments/argument-definition'
-import { allTypes } from './all-types'
+import { allSingleTypes } from './all-types'
 import { VariableLengthArgumentDefinition } from '../definition/arguments/variable-length-argument-definition'
 import { ListArgument } from '../arguments/list-argument'
+import { SingleArgumentType } from './single-argument-type'
+import { SingleArgument } from '../arguments/single-argument'
 
 /**
  * 可変長引数をテスト用に生成する数
@@ -18,39 +20,18 @@ export class ListArgumentType extends ArgumentType {
         return 'List'
     }
 
-    // FIXME: rowTestValue, bve5TestValue, csharpTestValueはlistだと使わないが抽象クラスで実装されているので必ず実装する必要がある。
-    // 使わないプロパティを強制実装される設計がアレなので修正したい
-    public get rowTestValue(): string {
-        return 'dummy'
-    }
-
-    public get bve5TestValue(): string {
-        return this.rowTestValue
-    }
-
-    public get csharpTestValue(): string {
-        return this.rowTestValue
-    }
-
     public convertDefinitionToArgument(argDef: ArgumentDefinition): Argument {
         // TODO: 本当にargDefがIVariableLengthArgumentDefinitionを実装しているか確認が必要
         const vArgDef = argDef as VariableLengthArgumentDefinition
 
-        // FIX ME: 一旦super.convertDefinitionToArgumentでIArgumentを取得して、それをIListArgumentに変換できたほうがきれいなのでそうしたい
         const argument: ListArgument = {
-            name: vArgDef.name,
-            type: vArgDef.type,
-            desc: vArgDef.desc,
-            opt: vArgDef.opt,
-            last: false,
-            test_value_map_grammar: this.bve5TestValue,
-            test_value_map_grammar_non_quote: this.rowTestValue,
-            test_value_csharp: this.csharpTestValue,
-            isList: false,
+            ...super.convertDefinitionToArgument(argDef),
+            is_list: true,
+            inner_type: vArgDef.inner_type,
             inner_arguments: this.generateRangeArgs(
                 vArgDef.name,
                 vArgDef.desc,
-                allTypes.find((t) => t.isType(vArgDef.inner_type))!,
+                allSingleTypes.find((t) => t.isType(vArgDef.inner_type))!,
                 vArgDef.counter_first,
                 generateArgumentCount
             ),
@@ -70,10 +51,10 @@ export class ListArgumentType extends ArgumentType {
     private generateRangeArgs(
         name: string,
         description: string,
-        type: ArgumentType,
+        type: SingleArgumentType,
         start: number,
         count: number
-    ): Argument[] {
+    ): SingleArgument[] {
         const args = Enumerable.range(start, count)
             .select(
                 (_) =>
@@ -82,14 +63,11 @@ export class ListArgumentType extends ArgumentType {
                         type: type.type,
                         desc: description,
                         opt: true,
-                        counter_first: undefined,
                         last: false,
                         test_value_map_grammar: type.bve5TestValue,
                         test_value_map_grammar_non_quote: type.rowTestValue,
                         test_value_csharp: type.csharpTestValue,
-                        isList: this.isType(type.type),
-                        inner_arguments: null,
-                    } as Argument)
+                    } as SingleArgument)
             )
             .toArray()
 

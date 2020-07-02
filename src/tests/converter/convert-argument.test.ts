@@ -1,8 +1,9 @@
 import { convertArguments } from '../../converter/convert-argument'
 import { ArgumentDefinition } from '../../definition/arguments/argument-definition'
+import { SingleArgument } from '../../arguments/single-argument'
 import { doubleArgumentType } from '../../argument-types/double-argument-type'
 import { stringArgumentType } from '../../argument-types/string-argument-type'
-import { assertSetIArgumentTestValue } from '../helper/assert-set-iargument-testvalue'
+import { assertSetISingleArgumentTestValue } from '../helper/assert-set-iargument-testvalue'
 
 describe('convertArguments', () => {
     let argDefinition: ArgumentDefinition
@@ -23,11 +24,11 @@ describe('convertArguments', () => {
     })
 
     it('single argument', () => {
-        const arg = convertArguments([argDefinition])
+        const arg = convertArguments([argDefinition]) as SingleArgument[]
         expect(arg.length).toBe(1)
         expect(arg[0]).toMatchObject(argDefinition)
         expect(arg[0].last).toBeTruthy()
-        assertSetIArgumentTestValue(arg[0], stringArgumentType)
+        assertSetISingleArgumentTestValue(arg[0], stringArgumentType)
     })
 
     it('multiple argument', () => {
@@ -41,16 +42,16 @@ describe('convertArguments', () => {
         argDefs[2].name = 'test3'
         argDefs[0].type = 'double?'
 
-        const args = convertArguments(argDefs)
+        const args = convertArguments(argDefs) as SingleArgument[]
         expect(args.length).toBe(argDefs.length)
         expect(args[0]).toMatchObject(argDefs[0])
         expect(args[0].last).toBeFalsy()
-        assertSetIArgumentTestValue(args[0], doubleArgumentType)
+        assertSetISingleArgumentTestValue(args[0], doubleArgumentType)
         expect(args[1]).toMatchObject(argDefs[1])
         expect(args[1].last).toBeFalsy()
-        assertSetIArgumentTestValue(args[1], stringArgumentType)
+        assertSetISingleArgumentTestValue(args[1], stringArgumentType)
         expect(args[2]).toMatchObject(argDefs[2])
         expect(args[2].last).toBeTruthy()
-        assertSetIArgumentTestValue(args[2], stringArgumentType)
+        assertSetISingleArgumentTestValue(args[2], stringArgumentType)
     })
 })

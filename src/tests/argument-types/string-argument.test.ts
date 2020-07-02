@@ -1,6 +1,6 @@
 import { stringArgumentType } from '../../argument-types/string-argument-type'
-import { assertSetIArgumentTestValue } from '../helper/assert-set-iargument-testvalue'
-import { createEmptyArgument } from '../helper/empty-argument'
+import { assertSetISingleArgumentTestValue } from '../helper/assert-set-iargument-testvalue'
+import { createEmptySingleArgument } from '../helper/empty-argument'
 
 describe('String', () => {
     describe('isType()', () => {
@@ -45,8 +45,8 @@ describe('String', () => {
 
     describe('setTestValue', () => {
         it('check set values', () => {
-            assertSetIArgumentTestValue(
-                stringArgumentType.setTestValue(createEmptyArgument()),
+            assertSetISingleArgumentTestValue(
+                stringArgumentType.setTestValue(createEmptySingleArgument()),
                 stringArgumentType
             )
         })

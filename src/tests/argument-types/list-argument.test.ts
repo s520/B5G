@@ -24,22 +24,4 @@ describe('List', () => {
             expect(listArgumentType.isType('listList')).toBeFalsy()
         })
     })
-
-    describe('rowTestValue', () => {
-        it('returns dummy value', () => {
-            expect(listArgumentType.rowTestValue).toBe('dummy')
-        })
-    })
-
-    describe('bve5TestValue', () => {
-        it('returns dummy value', () => {
-            expect(listArgumentType.bve5TestValue).toBe('dummy')
-        })
-    })
-
-    describe('csharpTestValue', () => {
-        it('returns dummy value', () => {
-            expect(listArgumentType.csharpTestValue).toBe('dummy')
-        })
-    })
 })
